@@ -1,0 +1,88 @@
+{% load static %}
+{% load svg %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Art Index</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'contacts/contacts_list3222021.css' %}">
+  <script>
+    function overlay() {
+	el = document.getElementById("overlay");
+	el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";}
+  </script>
+</head>
+
+<body>
+    <div class="container-fluid-1">
+      <div class="row">
+        <div class="containter-1">
+          {% block sidebar %}
+         
+          <ul class="sidebar-nav">
+            <h1><strong>Art-Index</strong></h1>
+            <ul class="nav-artwork">{% svg 'nav-artwork' %}<a href="{% url 'artwork:pieces' %}"><strong>Artwork</strong></a></ul>
+            <br>
+            <ul class='nav-locations'>{% svg 'nav-locations' %}<a href=""><strong>Location</strong></a></ul>
+            <br>
+            <ul class='nav-exhibtions'>{% svg 'nav-exhibitions' %}<a href=""><strong>Exhibitions</strong></a></ul>
+            <br>
+            <ul class='nav-schedule'>{% svg 'nav-schedule' %}<a href="{% url 'schedule:calendar' %}"><strong>Schedule</strong></a></ul>
+            <br>
+            <ul class='nav-contacts'>{% svg 'nav-contacts' %}<a href="{% url 'contacts:contacts' %}"><strong>Contacts</strong></a></ul>
+            <br>
+            <ul class='nav-income'>{% svg 'nav-income' %}<a href=""><strong>Income</strong></a></ul>
+            <br>
+            <ul class='nav-reports'>{% svg 'nav-reports' %}<a href=""><strong>Reports</strong></strobng></a></ul>
+            <br>
+            <ul class='nav-my-docs'>{% svg 'nav-my-docs' %}<a href=""><strong>My Docs</strong></strobg></a></ul>
+            <br>
+            <ul class='nav-insights'>{% svg 'nav-insights' %}<a href=""><strong>Insights</strong></a></ul>
+            <br>
+            <br>
+            {% if user.is_authenticated %}
+              User: {{ user.username }}
+              <p><a href="{% url 'logout' %}">Log Out</a></p>
+            {% else %}
+              <p>You are not logged in</p>
+              <a href="{% url 'login' %}">Log In</a>
+            {% endif %}
+          {% endblock %}
+          </ul>
+        </div>
+        
+        <div class="col" id="wrapper-outer">
+          <div class="container-2">
+            {% block header %}
+            {% endblock %}
+
+            <div class="col" id="wrapper-inner">
+              {% block content %}
+              {% endblock %}
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <div class="clearer"></div>
+
+    <!-- Optional JavaScript -->
+      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    
+      {% block script %}
+      {% endblock %}
+</body>
+</html>

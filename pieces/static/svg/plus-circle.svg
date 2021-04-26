@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.2" height="20.2" viewBox="0 0 20.2 20.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #116cd4;
+        stroke: #116cd4;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="plus-circle" transform="translate(0.5 0.5)">
+    <path id="Path_108" data-name="Path 108" class="cls-1" d="M13.275,7.875a.6.6,0,0,1,.6.6v4.8a.6.6,0,0,1-.6.6h-4.8a.6.6,0,0,1,0-1.2h4.2v-4.2A.6.6,0,0,1,13.275,7.875Z" transform="translate(-3.675 -3.675)"/>
+    <path id="Path_109" data-name="Path 109" class="cls-1" d="M16.875,17.475a.6.6,0,0,1,.6-.6h4.8a.6.6,0,1,1,0,1.2h-4.2v4.2a.6.6,0,0,1-1.2,0Z" transform="translate(-7.875 -7.875)"/>
+    <path id="Path_110" data-name="Path 110" class="cls-1" d="M9.6,18A8.4,8.4,0,1,0,1.2,9.6,8.4,8.4,0,0,0,9.6,18Zm0,1.2A9.6,9.6,0,1,0,0,9.6,9.6,9.6,0,0,0,9.6,19.2Z"/>
+  </g>
+</svg>

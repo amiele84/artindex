@@ -1,0 +1,91 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'pieces/pieces_upload.css' %}">
+</head>
+
+<body>
+    <div class="container-fluid-1">
+
+        <div class="row">
+        <div class="col-sm-2">
+        {% block sidebar %}
+           
+          <ul class="sidebar-nav">
+            <strong>Art Index</strong>
+            </ul>
+            <ul>
+            <ul><a href="">ArtWork</a></ul>
+            <ul><a href="">Location</a></ul>
+            <ul><a href="">Exhibitions</a></ul>
+            <ul><a href="">Schedule</a></ul>
+            <ul><a href="">Contacts</a></ul>
+            <ul><a href="">Income</a></ul>
+            <ul><a href="">Reports</a></ul>
+            <ul><a href="">My Docs</a></ul>
+            <ul><a href="">Insights</a></ul>
+          </ul>
+        {% endblock %}
+    
+    </div>
+        
+        <div class="col-sm-10">
+            <div class="container-1">
+                <div class="row">
+                    <div class="col"><h1>Add Artwork</h1></div>
+                </div>
+            
+                <p></p>
+                <form method="post" enctype="multipart/form-data">
+                    <div class="container-2">
+                        <div class="row">
+                            <div class="col"></div>
+                            <div class="col">
+                                <div class="container-upload">
+                                    <div class="img">
+                                        {% csrf_token %}
+                                        {{ form.piece_upload }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                                <ul><input id="title" type='text' name="title" value="title of piece"></ul>
+                                <ul>{{ form.description }}</ul>
+                                <p></p>
+                                <ul>Type</ul>
+                                <br>
+                                <ul>{{ form.medium }}</ul>
+                                <ul>{{ form.subject_matter }}</ul>
+                                <ul>Location</ul>
+                                <ul>Date of Upload  Visibility</ul>
+                            </div>
+                            <div class="col">
+                                <ul>Height x Width x Depth</ul>
+                                <br>
+                                <br>
+                                <ul>Status  Price   USD</ul>
+                                <br>
+                                <ul>Add Tags</ul>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit"><a href="{% url 'artwork:pieces' %}"></a></button>
+                </form>
+            </div>
+        </div>
+</body>
+</html>

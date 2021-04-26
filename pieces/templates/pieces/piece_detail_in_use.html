@@ -1,0 +1,22 @@
+{% extends 'pieces/pieces_try_working_copy.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'pieces/piece-detail.css' %}">
+<div class="solid">
+  <div class="container-1">
+      <h1>{{ piece.title }}</h1>
+      <div class="container-2">
+          <div class="pieceimage">
+                <hr class="fancy-1">
+                <img src="{{ piece.piece_upload.url }}" alt="Smilely face">
+                <br>
+                <br>
+                <ul><strong>{{ piece.artist }}</strong></ul>
+                <ul><strong>{{ piece.location }}</strong></ul>
+                <hr class="fancy-1">
+          </div>
+      </div>
+  </div>
+</div>
+{% endblock %}

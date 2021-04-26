@@ -1,0 +1,130 @@
+/*Outer container*/
+.container-fluid-1 {
+    background-color: white;
+    width: 100%;
+}
+
+/*sidebar col*/
+.col-sm-2 {
+    font-size: 10px;
+    padding-right: 20px;
+}
+
+
+/*inside sidebar*/
+.sidebar-nav {
+    margin: 5px;
+    width: 20%;
+
+    h4 {
+        font-size: 32px;
+        color: #116CD4;
+    }
+
+    ul {
+        font-size: 12px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        color: #c5c5c5;
+    }
+
+    a {
+        color: #F6F6FA;
+    }
+}
+
+/*header container*/
+.container-1 {
+    padding: 20px 20px 20px 20px;
+    background-color:#EFF7FF;
+    margin-top: 5%;
+    margin-left: 2%;
+    width: 98%;
+
+
+    h1 {
+        text-align: left;
+    }
+
+    h2 {
+        text-align: center;
+    }
+    
+    hr.solid {
+        border-top: 3px solid #bbb;
+    }
+}
+
+/*content container */
+.container-2 {
+    padding: 20px 20px 20px 20px;
+    background-color: white;
+    font-size: 10px;
+    width: 100%;
+}
+
+
+/*cols*/
+.col-sm-2 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+.col-sm-1 {
+    font-size: 5px;
+    align-content: left;
+}
+
+.col-md-2 {
+    font-size: 12px;
+    align-content: left;
+}
+
+
+
+.view-1 {
+    font-size: 16px;
+    align-content: left;
+    padding-right: 5px
+}
+
+.view-2 {
+    font-size: 16px;
+    align-content: left;
+    padding-right: 5px
+}
+
+.view-3 {
+    font-size: 16px;
+    align-content: left;
+    padding-right: 10px;
+}
+
+.new-piece-add {
+    padding-left: 250px; 
+}
+
+/*tags*/
+.container-5 {
+    background-color: blue;
+
+}
+
+/*tag filter*/
+.search-form {
+    background-color: blue;
+    color: white;
+}
+
+/*piece details */
+/*
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+ul ul {
+    display: inline-block;
+}
+*/

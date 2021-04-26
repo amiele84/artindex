@@ -1,0 +1,48 @@
+{% extends "base_pieces.html" %}
+
+{% block content %}
+{% load static %}
+<div class='header-pieces'>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'pieces/pieces.css' %}">
+    <h1><title>Pieces</title>
+    <a href="{% url 'artwork:new-upload' %}">Add Piece</a> 
+    </h1>
+</div>
+
+<body>
+<hr class="solid">
+<div class="row">
+    {% if pieces %}
+    <ul>
+    <form method='get'>
+        {{ filter.form.as_p }}
+        <form method='get'>
+            <input type='text' class="form-control-md-plaintext">
+        </form></div>
+    </form>
+
+      {% for piece in pieces %}
+          <div class="col-md-8">
+            <img src="{{piece.piece_upload.url}}" alt="Smiley face" width="100" height="100">
+            </div>
+          <div class="col-md-9">
+              <a href="{% url 'artwork:detail' piece.id %}">{{ piece.title }}</a>
+              <li>{{ piece.description }}</li>
+              </div>
+          <div class="col-md-10">
+              <li><p>Type: {{ piece.type }}</p></li>
+              <li><p>Size: {{ piece.width }} x {{ piece.height }} x {{ piece.depth }}</p></li>
+              <li><p>Subject: {{ piece.subject }}</p></li>
+              <li><p>Location: {{ piece.location }}</p></li>
+          </div>
+          <div class="col-md-10">
+              <a href="{% url 'artwork:piece-update' piece.id %}">Edit</a>
+              <a href="{% url 'artwork:delete' piece.id %}">Delete</a>
+          </div>
+      {% endfor %}
+    {% endif %}
+</div>
+</body>
+{% endblock %}

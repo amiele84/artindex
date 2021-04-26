@@ -1,0 +1,89 @@
+<html> 
+  
+<head> 
+    <link 
+     rel="stylesheet"
+     href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+    <style> 
+        .i-am-centered { 
+            margin: auto; 
+            max-width: 300px; 
+            padding-top: 20%; 
+        } 
+    </style> 
+</head> 
+  
+<body> 
+    <div class="i-am-centered"> 
+        <form method="POST" enctype="multipart/form-data"> 
+            {% csrf_token %} 
+            <div class="form-group"> 
+                <label>Piece Upload </label> 
+                {{ form.piece_upload }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Artist </label> 
+                {{ form.artist }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Title</label> 
+                {{ form.title }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Description</label> 
+                {{ form.description }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Types </label> 
+                {{ form.types }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Medium </label> 
+                {{ form.medium }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Subject Matter</label> 
+                {{ form.subject_matter }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Location</label> 
+                {{ form.location }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Date of Upload</label> 
+                {{ form.date_of_upload }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Visibility </label> 
+                {{ form.visibility }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Width</label> 
+                {{ form.width }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Height</label> 
+                {{ form.height }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Depth </label> 
+                {{ form.depth }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Dimensions </label> 
+                {{ form.dim }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Availability</label> 
+                {{ form.availability }} 
+            </div> 
+            <div class="form-group"> 
+                <label>Price</label> 
+                {{ form.price }} 
+            </div> 
+            <button type="submit" class="btn btn-primary">Submit<a href="{% url 'artwork:pieces' %}"></a></button>
+        </form> 
+    </div> 
+</body> 
+  
+</html>

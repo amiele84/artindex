@@ -1,0 +1,78 @@
+.sidebar-nav {
+    margin: 30px;
+    padding-left: 15px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 16px;
+    align-content: left;    
+}
+
+input {
+    color: white;
+    align-content: left;   
+}
+
+input1 {
+    background-color: blue;
+    color: white;
+    align-content: left;   
+}
+
+h3 {
+    font-size: 16px;
+}
+
+.col-sm-1 {
+    font-size: 16px;
+    align-content: left;
+}
+
+.col-sm-2 {
+    font-size: 10px;
+    padding-right: 20px;
+}
+
+ul {
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+hr.solid {
+    border-top: 3px solid #bbb;
+  }
+
+.container-fluid-1 {
+    padding: 20px 20px 20px 20px;
+    background-color: white;
+}
+
+.container-1 {
+    padding: 20px 20px 20px 20px;
+    padding-top: 40px;
+    background-color:#e6f1ff;
+}
+
+h1 {
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: right;
+}
+
+.container-2 {
+    padding: 20px 20px 20px 20px;
+    background-color: white;
+    font-size: 10px;
+}
+

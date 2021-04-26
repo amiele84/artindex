@@ -1,0 +1,54 @@
+{% extends "base_pieces.html" %}
+{% load static %}
+
+{% block content %}
+<h1>Add Piece</h1>
+<body>
+<div class="row">
+    <div class="container-content">
+    <div class="img">
+        {% csrf_token %}
+        {{ form.piece_upload }}
+    </div>
+    <div class="col-md-8">
+        <br>
+        <br>
+        <br>
+        <div class="fieldWrapper">
+            <label for="{{ form.title }}">Title</label>
+            {{ form.title }}
+        </div>
+        <div class="fieldWrapper">
+            {{ form.description }}
+        </div>
+        <br>
+        <br>
+        <div class="fieldWrapper">
+                <li>{{ form.types }}<li><br>
+                <li>{{ form.medium }}<li><br>
+                <li>{{ form.subject_matter }}<li><br>
+                <li>{{ form.location }}<li><br>
+            <br>
+            <div class="row">
+                {{ form.date_of_upload }} {{ form.visibility }}</br>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9">
+        <div class="fieldWrapper">
+            <div class="row">
+                Dimensions
+                <br>
+                {{ form.width }} x {{ form.height }} x {{ form.depth }}
+            </div>
+        </div>
+        <br>
+        <br>
+        {{ form.availability }} {{ form.price }}
+        <br>
+        <br>
+    </div>
+    </div>
+</div>
+</body>
+{% endblock %}

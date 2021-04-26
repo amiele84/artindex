@@ -1,0 +1,57 @@
+
+/*Outer/header*/
+.container-1 {
+    background-color: #F6F6FA;
+    width: 1000px;
+    height: 1000px;
+    margin: 5px;
+    font-family: Verdana;
+
+}
+
+h1.container-1 {
+    font-size: 48px;
+}
+
+/*border for containter-1*/
+.solid {
+    margin-top: 40px;
+    border-style: solid;
+    border-color: #F6F6FA;
+    border-width: 10px;
+}
+
+/*inner container*/
+.container-2 {
+    background-color: white;
+    width: 900px;
+    height: 700px;
+}
+
+.pieceimage {
+    text-align: center;
+    padding: 70px;
+}
+
+hr.fancy-1 {
+    border-top: 3px solid #bbb;
+    font-size: 72px;
+}
+
+ ul.pieceimage {
+    display: inline;
+    text-align: center;
+    margin-top: 72px;
+    font-family: Verdana;
+
+
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height: 60%;
+  border-radius: 30%;
+}

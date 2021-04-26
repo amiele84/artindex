@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35.861" height="18.956" viewBox="0 0 35.861 18.956">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2 {
+        stroke: #191847;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="Group_69" data-name="Group 69" transform="translate(1 1)">
+    <path id="Path_144" data-name="Path 144" class="cls-1" d="M500.553,439.738H474.865V422.782h33.861v11.135" transform="translate(-474.865 -422.782)"/>
+    <line id="Line_47" data-name="Line 47" class="cls-1" x2="6.47" transform="translate(22.752 5.917)"/>
+    <line id="Line_48" data-name="Line 48" class="cls-1" x2="6.47" transform="translate(22.752 10.595)"/>
+    <g id="Group_68" data-name="Group 68" transform="translate(3.674 3.628)">
+      <path id="Path_137" data-name="Path 137" class="cls-2" d="M497.041,432.986h.477a1.378,1.378,0,1,1,.059,2.755h-.634" transform="translate(-485.336 -429.448)"/>
+      <path id="Path_138" data-name="Path 138" class="cls-2" d="M481.289,435.741h-.477a1.378,1.378,0,1,1-.059-2.755h.634" transform="translate(-479.388 -429.448)"/>
+      <ellipse id="Ellipse_56" data-name="Ellipse 56" class="cls-2" cx="4.792" cy="4.792" rx="4.792" ry="4.792" transform="translate(1.952)"/>
+    </g>
+  </g>
+</svg>

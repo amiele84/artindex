@@ -1,0 +1,13 @@
+<svg id="x-circle" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #116cd4;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="Path_151" data-name="Path 151" class="cls-1" d="M10,18.75A8.75,8.75,0,1,0,1.25,10,8.75,8.75,0,0,0,10,18.75ZM10,20A10,10,0,1,0,0,10,10,10,0,0,0,10,20Z"/>
+  <path id="Path_152" data-name="Path 152" class="cls-1" d="M15.872,9.127a.438.438,0,0,1,0,.62L9.746,15.873a.438.438,0,0,1-.62-.62l6.126-6.126a.438.438,0,0,1,.62,0Z" transform="translate(-2.499 -2.5)"/>
+  <path id="Path_153" data-name="Path 153" class="cls-1" d="M9.127,9.127a.438.438,0,0,0,0,.62l6.126,6.126a.438.438,0,0,0,.62-.62L9.747,9.127a.438.438,0,0,0-.62,0Z" transform="translate(-2.5 -2.5)"/>
+</svg>

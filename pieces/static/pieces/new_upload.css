@@ -1,0 +1,29 @@
+h1 {
+    color: blue;
+
+}
+
+.container-content {
+    border: 1px solid #ddd;
+    padding: 10px 20px 10px 10px; 
+
+}
+
+.img {
+    border: 2px solid #ddd;
+    padding: 10px 30px 30px 10px; 
+
+}
+.col-md-8 {
+    margin-top: 5px;
+    float: left;
+    width: 60%;
+    padding: 10px 10px 10px 10px;
+}
+
+.col-md-9{
+    margin-top: 5px;
+    float: right;
+    width: 20%;
+    padding: 25px 10px 10px 10px;
+}

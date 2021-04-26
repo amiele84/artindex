@@ -1,0 +1,58 @@
+{% extends 'contacts/contact_list_working_copy.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% crispy form %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'contacts/contacts_working_copy.css' %}">
+<div class="container-2">
+
+  <div class="row">
+    <div class="container-2" style="margin-left:20%;margin-top:20px;height: 800px;width: 50%;">
+      <div class="row">
+        <div class="container-3" style="align-content: space-between; width: fit-content; height: 50%">container4
+          <div class="row">
+            <div class="row">
+              <div class="col-sm-10">
+                <img src="{{ contact.contact_image.url }}" alt="Smilely face" width="80" height="80" style="border-radius: 50%;"></div>
+              </div>
+            <div class="col" style="font-size: medium;">
+              <p><strong>{{ contact.first_name }} {{ contact.last_name }}</strong></p>
+              <div class="row">
+                <div class="col">{{ contact.title }}<strong>{{ contact.company }}</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10" style="padding-top: 10%; align-content: center;">
+        <hr class="solid">
+        <div class="row" style="padding-top: 20%; align-content: center;">
+          <div class="col"><strong>Email</strong></div>
+          <div class="col">{{ contact.email }}</div>
+        </div>
+        <br>
+        <div class="row" style="align-content: center;">
+          <div class="col"><strong>Phone Number</strong></div>
+          <div class="col">{{ contact.phone_number }}</div>
+        </div>
+        <br>
+        <br>
+        <div class="row" style="align-content: center;">
+          <div class="col"><strong>Address</strong></div>
+          <div class="col">Fake Address</div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="row" style="padding-bottom: 20%; align-content: center;">
+          <div class="col"><strong>Birthday</strong></div>
+          <div class="col">{{ contact.birth_date }}</div>
+        </div>
+        <hr class="solid">
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

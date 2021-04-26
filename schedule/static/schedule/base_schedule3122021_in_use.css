@@ -1,0 +1,391 @@
+/*fixed width*/
+* {
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+#wrapper-outer {
+	border: 1px solid white;
+  width: 200px;
+}
+
+
+#header {
+	border-bottom: 1px solid #000;
+	padding: 10px;
+	background-color: #eee;
+}
+
+#content {
+	margin-left: 200px;
+	border-left: 1px solid #000;
+	padding: 10px;
+	line-height: 2em;
+}
+
+.clearer {
+	clear: both;
+}
+/*end fixed width*/
+
+/*Outer container*/
+.container-fluid-1 {
+    background-color: white;
+    width: 100%;
+    min-width: 100%;
+}
+/*end outer container*/
+
+/*inside sidebar*/
+
+.sidebar-nav {
+    float: left;
+    font-family: Arial;
+    margin-left: 50px;
+    margin-right: 0;
+    margin-bottom: 100px;
+    
+}
+
+h1 {
+    font-size: 26px;
+    font-family: sans-serif;
+    color:  #116CD4;
+    padding: 10px;
+    padding-bottom: 80px;
+}
+
+ul.sidebar-nav {
+    list-style-type: none;
+    width: 250px;
+}
+
+ul {
+    display: inline-block;
+    font-size: 14px;
+    padding-left: 50px;
+    padding-right: 0%;
+    padding-bottom: 15px;
+}
+
+a {
+    display: inline-block;
+    margin: auto;
+    padding-right: 0;
+    padding-bottom: 15px;
+}
+
+ul.nav-artwork a{
+    display: inline-block;
+    margin: auto;
+    padding-top: 80px;
+    padding-left: 30px;
+    color: black; 
+}
+
+
+ul.nav-locations a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 35px;
+    color: black; 
+}
+
+ul.nav-exhibtions a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 25px;
+    color: black;
+}
+
+ul.nav-schedule  a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 30px;
+    color: black; 
+}
+
+ul.nav-contacts  a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 25px;
+    color: black; 
+}
+
+ul.nav-income  a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 35px;
+    color: black; 
+}
+
+ul.nav-reports  a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 35px;
+    color: black; 
+}
+
+ul.nav-my-docs  a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 35px;
+    color: black; 
+}
+
+ul.nav-insights  a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 35px;
+    color: black; 
+}
+
+
+ul a.active {
+    background-color: grey;
+    color: white;
+}
+/*end sidebar*/
+
+/*Outer/header*/
+.container-1 {
+    background-color: #F6F6FA;
+    height: 1200px;
+    margin-top: 10px;
+    margin-right: 0;
+    padding-left: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+div.page-title {
+    margin-left: 4px;
+}
+
+div.views {
+    margin-left: 20px;
+}
+
+
+h2 {
+    display: inline-block;
+    padding-left: 80px;
+    padding-top: 40px;
+    font-size: 50px;
+    font-family:Arial, Helvetica, sans-serif sans-serif;
+}
+
+a {
+    display: inline-block;
+    font-size: 24x;
+    font-family: Tahoma, sans-serif;
+}
+
+
+hr.solid {
+    border-top: 1px solid #bbb;
+    margin-right: 80px;
+    margin-left: 80px;
+}
+
+.divider {
+  padding-bottom: 40px;
+}
+
+
+/*inner container*/
+.container-2 {
+    margin-left: 20px;
+    margin-top: 50px;
+    margin-right: 0;
+    padding-right: 20px;
+    font-size: 10px;
+    width: 1400px;
+    height: 1000px;
+    background-color: white;
+}
+
+.inner-cal {
+  margin: auto;
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 80px;
+  align-content: center;
+  background-color: white;
+  font-size: 2px;
+  width: 1300px;
+  height: 1000px;
+}
+
+
+/*end innter containers*/
+
+/*start calendar*/
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .left {
+    margin: 0;
+    padding-left: 80px;
+    padding-right: 10px;
+    padding-top: 30px;
+    padding-bottom: 0px;
+    float: left;
+  }
+  
+  .right {
+    padding-left: 5px;
+    padding-top: 30px;
+    padding-right: 80px;
+    float: right;
+  }
+
+  .top {
+    padding-left: 5px;
+    padding-top: 40px;
+    padding-right: 50px;
+    float: right;
+  }
+
+
+  .current-month {
+      align-content: center;
+      padding-top: 20px;
+      padding-bottom: 0px;
+      padding-left: 0px;
+      font-size: 32px;
+      color: black;
+  }
+  
+  .btn {
+    outline: white;
+    color: black;
+    background-color: transparent;
+    box-shadow: 0 0 0 0;
+    margin-right: 3px;
+    border-color: white;
+    border-radius: 5px;
+  }
+
+
+  .clearfix {
+    margin: 5px;
+  }
+  
+  .form {
+    margin: auto;
+  }
+  
+  .form input, .form select, .form textarea {
+    border-radius: 5px;
+    border: 1px solid #17a2b8;
+    outline: none;
+    background: none;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  /* App styles */
+  .title {
+    text-align: left;
+    margin: 10px;
+  }
+  
+  .calendar {
+    margin: auto;
+    font-size: 13px;
+    padding 25%;
+  }
+  
+  /*outer border of cal
+  .calendar tr {
+    border: 1px solid #116CD4;
+  }
+*/
+
+  /*inner border of cal */
+table.calendar {
+  border-collapse: collapse;
+  border-radius: 1em;
+}
+
+  .calendar td {
+    outline: 1px solid #116CD4;
+  }
+  
+  .calendar th {
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 10px;
+  }
+
+  
+  .calendar td {
+    padding: 15px;
+    width: 10%;
+    height: 50px;
+  }
+  
+  .month {
+    font-size: 25px;
+  }
+
+  .date{
+    font-size: 10px;
+  }
+  
+  .calendar td ul {
+    padding-left: 10px;
+    padding-right: 0px;
+    margin: 0px;
+    width: 50px;
+    height: 70px
+  }
+
+  ul, a {
+    padding-left:0px;
+    color: #6695db;
+    align-content: center;
+  }
+
+
+
+  /*other cals
+  .my-schedules {
+    display:inline-block;
+    margin: 0;
+    padding-left: 0px;
+    width: 20px;
+    font-size: 30px;
+  }
+
+  .my-schedules ul {
+    margin: 0px;
+    padding: 2px;
+  }
+*/
+
+  /*new piece*/
+  .form-table {
+    width: 50%;
+  }
+  
+  .new-event {
+    margin: auto;
+    padding-top: 50px;
+    padding-left: 220px;
+    padding-right: 80px;
+    align-content: center;
+    background-color: white;
+    font-size: 2px;
+    width: 1300px;
+    height: 1000px;
+  }
+  
+  .event-form {
+    width: 1000px;
+    height: 900px; 
+  }
+  

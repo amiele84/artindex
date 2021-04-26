@@ -1,0 +1,112 @@
+{% extends 'base_schedule_working_copy.html' %}
+
+{% block header %}
+{% load static %}
+  <link rel="stylesheet" href="{% static 'schedule/base_schedule3212021_in_use.css' %}">
+  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+  <div class="container-1">
+    <div class="row">
+      <h2>Calendar</h2>
+        <div class="tag-filter"></div>
+    </div>
+    <div class="row">
+      {#<a href='#' onclick='overlay()'>Click here to show the overlay</a>#}
+    </div>
+      <hr class="solid">
+      <div class="divider">
+        <ul id="filter-filter">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+            <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+          </svg>
+          <strong>Filter:</strong>
+        </ul>
+        <ul><strong>Relation</strong>
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+          </svg>
+        </ul>
+        <ul><strong>Group</strong>
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+          </svg>
+        </ul>
+        <ul><strong>Location</strong>
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+            <path d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+          </svg>
+        </ul>
+      <p></p>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+  <link rel="stylesheet" href="{% static 'schedule/base_schedule3222021_in_use.css' %}">
+  <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+	
+ 	<div class="container-2 inner-cal">
+		<div class="row">
+			<div class="col">
+				<div class="my-schedules">
+				  <p>My Calendars</p>
+				  <li>
+					<label class="container">
+						<input type="checkbox" checked="checked">
+						<span class="checkmark"></span>
+						My Calendar
+					  </label>
+					</li>
+				  <li>
+					<label class="container">
+						<input type="checkbox" checked="checked">
+						<span class="checkmark"></span>
+						Shows
+					  </label>
+					</li>
+				  <li>
+					<label class="container">
+						<input type="checkbox" checked="checked">
+						<span class="checkmark"></span>
+						Meetings
+					  </label>
+					</li>
+				  <li>
+					<label class="container">
+						<input type="checkbox" checked="checked">
+						<span class="checkmark"></span>
+						Events
+					  </label>
+					</li>
+				</div>
+			</div>
+			<div class="col">
+				<div class="cal">
+					{{ calendar }}
+				</div>
+					<div class="clearfix">
+						<ul style="display: inline-block;">
+							<a class="btn btn-info left" href="{% url 'schedule:calendar' %}?{{ prev_month }}">
+								<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-chevron-left" href="{% url 'schedule:calendar' %}?{{ prev_month }}" viewBox="0 0 16 16">
+									<path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+								</svg>
+							</a>
+							<a class="current-month">{{ current_month }} {{ current_year }}</a>
+							<a class="btn btn-info right" href="{% url 'schedule:calendar' %}?{{ next_month }}">
+								<svg xmlns="http://www.w3.org/2000/svg" width="30" height=30 fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+									<path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+								  </svg>	
+							</a>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="overlay">
+	<div class="event-edit">
+		<p>EDIT EVENT</p>
+	</div>	
+</div>
+{% endblock %}

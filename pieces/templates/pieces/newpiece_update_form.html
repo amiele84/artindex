@@ -1,0 +1,115 @@
+{% extends "base_pieces_working_copy.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% crispy form %}
+
+
+{% block header %}
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{% static 'pieces/pieces_list3122021.css' %}">
+
+<div class="container-1">
+    <div class="row">
+      <h2>Update Piece</h2>
+        <div class="views">
+        </div>
+        <div class="tag-filter">
+        </div>
+      </div>
+    <div class="row">
+      {#<a href='#' onclick='overlay()'>Click here to show the overlay</a>#}
+    </div>
+      <hr class="solid">
+      <div class="divider">
+      </div>
+      <br>
+      <p></p>
+{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css">
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{% static 'pieces/pieces_list3122021.css' %}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+<script scr="/Volumes/Lexar/django/artindex/pieces/static/dropzone-5.7.0/dist/dropzone.js"></script>
+
+<div class="container-2" style="padding-top: 20px;">
+    <form method="POST" enctype="multipart/form-data"> 
+        {% csrf_token %}
+        <div class="container-2">
+            <div class="container-2">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                                {{ form.title|as_crispy_field }}
+                        </div>
+                        <div class="form-group">
+                                {{ form.description|as_crispy_field }}
+                        </div>
+                        <div class="form-group">
+                                {{ form.artist|as_crispy_field }}
+                        </div>
+                        <p></p>
+                        <div class="form-group">
+                                {{ form.types|as_crispy_field }}
+                        </div>
+                        <br>
+                        <div class="form-group">
+                                {{ form.medium|as_crispy_field }}
+                        </div>
+                        <div class="form-group">
+                                {{ form.subject_matter|as_crispy_field }}
+                        </div>
+                        <div class="form-group">
+                                {{ form.location|as_crispy_field }}
+                        </div>
+                        <div class="form-group">
+                                {{ form.date_of_upload|as_crispy_field }}
+                        </div> 
+                        <div class="form-group">  
+                            {{ form.visibility|as_crispy_field }} 
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="form-row">
+                            <div class="form-group col-sm-2 mb-0">
+                                {{ form.height|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-sm-2 mb-0">
+                                {{ form.width|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-sm-2 mb-0">
+                                {{ form.depth|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-sm-2 mb-0">
+                                {{ form.dim|as_crispy_field }}
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6 mb-0">
+                                {{ form.availability|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-md-6 mb-0">
+                                {{ form.price|as_crispy_field }}
+                            </div> 
+                        </div>  
+                        <div class="form-row">
+                            <div class="form-group col-md-6 mb-0">
+                                {{ form.tags|as_crispy_field }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <br>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-primary">Update<a href="{% url 'artwork:pieces' %}"></a></button>
+    </form>
+    <br>
+    <br>
+</div>
+{% endblock %}
+

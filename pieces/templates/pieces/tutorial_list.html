@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="{% static 'pieces/pieces_tutorial.css' %}">
+</head>
+
+<body>
+    <div class="container-fluid-1">
+
+        <div class="row">
+          <div class="col-sm-2">
+          {% block sidebar %}
+           
+          <ul class="sidebar-nav">
+            <strong>Art Index</strong>
+            </ul>
+            <ul>
+            <ul><a href="{% url 'artwork:pieces' %}">ArtWork</a></ul>
+            <ul><a href="">Location</a></ul>
+            <ul><a href="">Exhibitions</a></ul>
+            <ul><a href="{% url 'schedule:calendar' %}">Schedule</a></ul>
+            <ul><a href="{% url 'contacts:contacts' %}">Contacts</a></ul>
+            <ul><a href="">Income</a></ul>
+            <ul><a href="">Reports</a></ul>
+            <ul><a href="">My Docs</a></ul>
+            <ul><a href="">Insights</a></ul>
+          </ul>
+            
+          {% endblock %}
+            
+        </div>
+            {% block content %}
+            <div class="col-sm-10 ">
+                {% if tutorials %}
+                <div class="container-1">
+                    <div class="row">
+                            <div class="col"><h1>Pieces</h1></div>
+                            <div class="col">
+                                <form method="get">
+                                    {#{{ filter.form.as_p }}#}
+                                </form></div>
+                            <div class="col"><h3>
+                                <a href="{% url 'artwork:tutorial-upload' %}">Add Piece</a></h3></div>
+                    </div>
+                    <hr class="solid">
+                    <div class="row">
+                        <div class="col-sm-2">Filter: </div>
+                        <div class="col-sm-2">Status </div>
+                        <div class="col-sm-2">Location </div>
+                        <div class="col-sm-2">Date </div>
+                        <div class="col-sm-2">Medium </div>
+                        <div class="col-sm-2">Price </div>
+                    </div>
+                    <p></p>
+                    <div class="container-2">
+                        {% for tutorial in tutorial %}
+                        <div class="row">
+                            {{ tutorial.name }}
+                            {{ tutorial.email }}
+                            {{ tutorial.comment }}
+                        </div>
+                        <br>
+                        <br>
+                        {% endfor %}
+                    </div>    
+                </div>
+                {% endif %}
+            </div>
+            {% endblock %}
+        </div>
+
+    </div>
+</body>
+</html>

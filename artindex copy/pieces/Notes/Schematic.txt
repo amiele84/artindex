@@ -1,0 +1,70 @@
+Three APPS: Pieces, Calendar, Contacts
+
+                    ## PIECES ##
+
+##Models##
+Piece
+    
+PieceInstance
+Artist
+
+
+##Views##
+index
+
+PiecesListView_lrg
+PiecesListView_md
+PiecesListView_dt
+
+UploadImageView
+PiecesCreateView
+PiecesEditView
+
+
+##templates##
+base.html
+    index.html
+        
+        {pieces_large.html
+        pieces_medium.html
+        pieces_dts.html}
+            new_upload.html
+                new_upload_create.html
+            piece_detail.html
+            piece_edit.html
+    
+        authors_list.html
+            author_detail.html
+            new_artist.html
+            
+
+                    ##Schedule##
+##Models
+Event
+
+
+##utils
+calendar
+
+##Views
+calendarView
+
+get_date
+prev_month
+next_month
+event
+
+##
+
+##urls.main##
+
+" ", include(pieces.urls)
+
+" ", include(cal.urls)
+
+" ", include(contacts.urls)
+
+
+
+
+                ##Contacts##

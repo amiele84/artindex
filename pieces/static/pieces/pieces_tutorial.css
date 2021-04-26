@@ -1,0 +1,116 @@
+.sidebar-nav {
+    margin: 5px;
+    padding-left: 10px;
+    width: fit-content;
+
+    h4 {
+        font-size: 32px;
+        color: #116CD4;
+    }
+
+    ul {
+        font-size: 12px;
+        padding-top: 10px;
+        padding-bottom: 5px;
+        color: #c5c5c5;
+    }
+    
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 16px;
+    align-content: left;    
+}
+
+input {
+    color: white;
+    align-content: left;   
+}
+
+/*
+input1 {
+    background-color: blue;
+    color: white;
+    align-content: left;   
+}
+*/
+
+h3 {
+    font-size: 16px;
+}
+
+
+
+.col-sm-1 {
+    font-size: 16px;
+    align-content: left;
+}
+
+.col-sm-2 {
+    font-size: 10px;
+    padding-right: 20px;
+}
+
+.container-fluid-2 {
+    background-color: blue;
+}
+
+/*
+ul {
+    font-size: 12px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+}
+*/
+
+hr.solid {
+    border-top: 3px solid #bbb;
+  }
+
+.container-fluid-1 {
+    padding: 20px 20px 20px 20px;
+    background-color: white;
+}
+
+.container-1 {
+    padding: 20px 20px 20px 20px;
+    padding-top: 10px;
+    background-color:#e6f1ff;
+
+}
+
+.search-form {
+    color: #116CD4;
+}
+
+
+h1 {
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+}
+
+h3 {
+    text-align: right;
+}
+
+
+.container-2 {
+    padding: 20px 20px 20px 20px;
+    background-color: white;
+    font-size: 10px;
+}
+
+.i-am-centered { 
+    margin: auto; 
+    max-width: 300px; 
+    padding-top: 20%;
+    padding-left: 20%; 
+}

@@ -1,0 +1,29 @@
+{% extends "base_contacts.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <h1><title>Contacts</title>
+  {#<a href="{% url 'artwork:new-upload' %}">"Add Piece"</a> #}
+  </h1>
+<body>
+<div class="row">
+  {% if contacts %}
+    {% for contact in contacts %}
+        <div class="col-md-8">
+          <img src="{{ contact.contact_image.url}}" alt="Smiley face" width="50" height="50">
+          {#<li>{{ contact.contact_image }}</li>#}
+          </div>
+        <div class="col-md-9">
+            <a href="{{ contacts.get_absolute_url }}"> {{contact.first_name}} {{ contact.last_name }}</a>
+            </div>
+        <div class="col-md-10"> 
+            <title>email</title> 
+            <p>{{ contact.email }}</p>}
+          </div> 
+    {% endfor %} 
+  {% endif %}
+</div>
+</body>
+</div>
+{% endblock %}

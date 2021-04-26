@@ -1,0 +1,30 @@
+{% extends 'pieces/pieces_try_working_copy.html' %}
+{% load static %}
+
+{% block header %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css">
+
+<div class="row">
+    <div class="views">
+      <h2><strong>{{ piece.title }}</strong></h2>
+    </div>
+    </div>
+  <hr class="solid">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="solid">
+	<div class="pieceimage">
+        <hr class="fancy-1">
+                <img src="{{ piece.piece_upload.url }}" alt="Smilely face">
+                <br>
+                <br>
+            <ul><strong>{{ piece.artist }}</strong></ul>
+	        <ul><strong>{{ piece.location }}</strong></ul>
+		<hr class="fancy-1">
+    </div>
+
+</div>
+{% endblock %}

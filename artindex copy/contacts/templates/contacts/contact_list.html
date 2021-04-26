@@ -1,0 +1,35 @@
+{% extends "base_contacts.html" %}
+{% load static %}
+
+{% block content %}
+<h1><title>Pieces</title>
+<a href="{% url 'contacts:new-contact' %}">Add Contact</a> 
+</h1>
+
+<body>
+<div class="row">
+  {% if contact_list %}
+    {% for contact in contact_list %}
+        <div class="col-md-8">
+          <img src="{{ contact.contact_image.url}}" alt="Smiley face" width="50" height="50">
+          {#<li>{{ contact.contact_image }}</li>#}
+          </div>
+        <div class="col-md-9">
+            <a href="{{ contacts.get_absolute_url }}"> {{contact.first_name}} {{ contact.last_name }}</a>
+            {# below now works #}
+            <a href="{% url 'contacts:detail' contact.id %}"> {{contact.first_name}}</a>            
+            </div>
+        <div class="col-md-10">
+            <title>email</title>
+            <p>{{ contact.email }}</p>
+          </div>
+          <div class="col-md-9">
+              <a href="{% url 'contacts:contact-update' contact.id %}">Edit</a>
+              <a href="{% url 'contacts:delete' contact.id %}">Delete</a>
+              <br>
+          </div>
+    {% endfor %}
+  {% endif %}
+</div>
+</body>
+{% endblock %}

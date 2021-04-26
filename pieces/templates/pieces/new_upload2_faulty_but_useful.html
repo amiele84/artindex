@@ -1,0 +1,79 @@
+  
+<body>
+    <div class="col-sm-10">
+        <div class="container-1">
+            <div class="row">
+                <div class="col"><h1>Add Artwork</h1></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <hr class="solid">
+            <div class="container-2">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="container-3">
+                        <div class="form-group">
+                            <label>Upload Piece</label>
+                                {{ form.piece_upload}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Title</label>
+                                    {{ form.title }}
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                    {{ form.description }}
+                            </div>
+                            <p></p>
+                            <div class="form-group">
+                                <label>Type</label>
+                                    {{ form.type }}
+                            </div>
+                            <br>
+                            <div class="form-group">
+                                <label>Medium</label>
+                                    {{ form.medium }}
+                            </div>
+                            <div class="form-group">
+                                <label>Subject Matter</label>
+                                    {{ form.subject_matter }}
+                            </div>
+                            <div class="form-group">
+                                <label>Location</label>
+                                    {{ form.location }}
+                            </div>
+                            <div class="form-group">
+                                <label>Date of Upload</label>
+                                    {{ form.date_of_upload }}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label>Height Depth Width</label>
+                                    {{ form.height }} {{ form.width }} {{ form.depth }} 
+                            </div>
+                            <div class="form-group">
+                                <label>Dimensions</label>
+                                    {{ form.dim }}
+                            </div>
+                            <br>
+                            <br>
+                            <div class="form-group">
+                                <label>Availability</label>
+                                    {{ form.availability }}
+                            </div>
+                            <div class="form-group">
+                                <label>Price</label>
+                                    {{ form.price }}
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit<a href="{% url 'artwork:pieces' %}"></a></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

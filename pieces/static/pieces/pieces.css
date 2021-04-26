@@ -1,0 +1,31 @@
+.sidebar-nav {
+    margin: 30px;
+    padding-left: 15px;
+}
+
+/* Solid border */
+hr.solid {
+    border-top: 3px solid #bbb;
+  }
+
+body {background-color: #92a8d1;}
+
+.container {
+    padding: 20px 20px 20px 20px;
+    background-color: #92a8d1;
+}
+
+div.header-pieces {
+    background-color: #F0F8FF; 
+}
+
+body {
+    background-color: #00FFFF;
+}
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }

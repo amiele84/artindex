@@ -1,0 +1,31 @@
+{% extends "base_pieces.html" %}
+{% load static %}
+
+{% block content %}
+    <h1><title>Pieces</title>
+    <a href="{% url 'artwork:new-upload' %}">"Add Piece"</a> 
+    </h1>
+<body>
+<div class="row">
+    {% if pieces %}
+    <ul>
+
+      {% for piece in pieces %}
+          <div class="col-md-8">
+            <img src="{{piece.piece_upload.url}}" alt="Smiley face" width="250" height="250">
+            </div>
+          <div class="col-md-9">
+              <li>{{ piece.title }}</li>
+              <li>{{ piece.description }}</li>
+              </div>
+          <div class="col-md-10">
+              <li><p>Type: {{ piece.type }}</p></li>
+              <li><p>Size: {{ piece.width }} x {{ piece.height }} x {{ piece.depth }}</p></li>
+              <li><p>Subject: {{ piece.subject }}</p></li>
+              <li><p>Location: {{ piece.location }}</p></li>
+          </div>
+      {% endfor %}
+    {% endif %}
+</div>
+</body>
+{% endblock %}

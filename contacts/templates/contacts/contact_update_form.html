@@ -1,0 +1,126 @@
+{% extends 'base_contacts.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% crispy form %}
+
+{% block header %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css">
+<link rel="stylesheet" href="{% static 'contacts/contacts_list3222021.css' %}">
+
+
+<div class="container-1">
+    <div class="row">
+      <h2>New Contact</h2>
+      </div>
+    <div class="row">
+      {#<a href='#' onclick='overlay()'>Click here to show the overlay</a>#}
+    </div>
+      <hr class="solid">
+      <div class="divider"></div>
+      <br>
+      <p></p>{% endblock %}
+
+
+{% block content %}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css">
+<link rel="stylesheet" href="{% static 'contacts/contacts_list3222021.css' %}">
+
+<div class="container-2">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-row">
+            <div class="current-image"></div>
+            <div class="form-group col-sm-2" style="padding-top: 40px; padding-left: 20px;">
+                {#<img src="{{contact.contact_image.url}}" alt="Smiley face" width="135" height="115" style="border-radius: 20%; box-shadow: 1px 1px 1px grey;">#}
+                {{ form.contact_image|as_crispy_field }}
+            </div>
+            <div class="form-group">
+                <div class="form-row"style="padding-left: 70px; padding-top: 40px;">
+                    <div class="form-group">
+                        {{ form.first_name|as_crispy_field }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.middle_name|as_crispy_field }}
+                    </div>
+                    <div class="form-group">
+                        {{ form.last_name|as_crispy_field }}
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div class="container-2">
+                <div class="form-row" style="padding-left: 240px">
+                    <div class="form-group col-5">
+                        {{ form.job_title|as_crispy_field}}
+                    </div>
+                    <div class="form-group col-6" style="padding-left: 80px">
+                        {{ form.company|as_crispy_field }}
+                    </div>
+                </div>
+                <div class="form-row" style="padding-left: 240px;">
+                  <div class="form-group col-sm-2 mb-0">
+                    {{ form.contact_types|as_crispy_field}}
+                    </div>
+                    <div class="form-group">
+                        {{ form.email|as_crispy_field}}
+                    </div>
+                </div>
+                <div class="form-row contact-types" style="padding-left: 240px">
+                    <div class="form-group col-sm-2 mb-0">
+                        {{ form.contact_types|as_crispy_field}}
+                    </div>
+                    <div class="form-group">
+                        {{ form.phone_number|as_crispy_field}}
+                    </div>
+                </div>
+                <div class="form-row" style="padding-left: 240px">
+                    <div class="form-group col-sm-2 mb-0">
+                        {{ form.contact_types|as_crispy_field}}
+                    </div>
+                    <div class="form-group">
+                        {{ form.phone_number|as_crispy_field}}
+                    </div>
+                </div>
+                <div class="form-row" style="padding-left: 240px">
+                    <div class="new-contact-details">
+                        <div class="form-row">
+                            <div class="form-group col-4">
+                                {{ form.birth_date|as_crispy_field }}
+                            </div>
+                            <div class="form-group col-4">
+                                {{ form.death_date|as_crispy_field }}
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="form-row" style="padding-left: 0px">
+                        <div class="form-group col-10">
+                            {{ form.bio|as_crispy_field}}
+                        </div>
+                    </div>
+                    <div class="form-row" style="padding-left: 0px">
+                        <div class="form-group col-10">
+                            {{ form.notes|as_crispy_field}}
+                        </div>
+                    </div>
+    
+                    <div class="col">
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Save<a href="{% url 'contacts:contacts' %}"></a></button>
+    </form>
+</div>
+
+{% endblock %}

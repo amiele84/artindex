@@ -1,0 +1,509 @@
+/*fixed width*/
+* {
+	margin:0;
+	padding:0;
+	border:0; 
+}
+
+#wrapper-outer {
+	border: 1px solid white;
+  width: 200px;
+}
+
+
+#header {
+	border-bottom: 1px solid #000;
+	padding: 10px;
+	background-color: #eee;
+}
+
+#content {
+	margin-left: 200px;
+	border-left: 1px solid #000;
+	padding: 10px;
+	line-height: 2em;
+}
+
+.clearer {
+	clear: both;
+}
+/*end fixed width*/
+
+/*Outer container*/
+.container-fluid-1 {
+    background-color: white;
+    width: 100%;
+    min-width: 100%;
+    height: fit-content;
+}
+/*end outer container*/
+
+/*inside sidebar*/
+
+.sidebar-nav {
+    float: left;
+    font-family: Arial;
+    margin-left: 30px;
+    margin-right: 20px;
+    margin-bottom: 100px;
+    
+}
+
+h1 {
+    font-size: 26px;
+    font-family: sans-serif;
+    color:  #116CD4;
+    padding: 10px;
+    padding-bottom: 80px;
+}
+
+ul.sidebar-nav {
+    list-style-type: none;
+    width: 250px;
+}
+
+ul {
+    display: inline-block;
+    font-size: 14px;
+    padding-left: 50px;
+    padding-right: 0%;
+    padding-bottom: 15px;
+}
+
+a {
+    display: inline-block;
+    margin: auto;
+    padding-right: 0;
+    padding-bottom: 15px;
+}
+
+ul.nav-artwork a{
+    display: inline-block;
+    margin: auto;
+    padding-top: 80px;
+    padding-left: 30px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #191847;
+}
+
+
+ul.nav-locations a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 35px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #191847;
+}
+
+ul.nav-exhibtions a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 25px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #191847;
+}
+
+ul.nav-schedule  a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 30px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #191847;
+}
+
+ul.nav-contacts  a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 25px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #191847;
+}
+
+ul.nav-income  a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 35px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #191847;
+}
+
+ul.nav-reports  a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 35px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #191847;
+}
+
+ul.nav-my-docs  a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 30px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #191847;
+}
+
+ul.nav-insights  a{
+    display: inline-block;
+    margin: auto;
+    padding-left: 30px;
+    font-family: sans-serif;
+    font-size: 14px;
+    color: #191847;
+}
+
+
+ul a.active {
+    background-color: grey;
+    color: white;
+}
+/*end sidebar*/
+
+/*Outer/header*/
+/*Outer/header*/
+.container-1 {
+    background-color: #F6F6FA;
+    width: 1200px;
+    height: fit-content;
+    margin-top: 60px;
+    margin-right: 15px;
+    padding-top: 0px;
+    font-family: Verdana;
+  
+  }
+  
+  div.page-title {
+    margin-left: 4px;
+  }
+  
+  div.views {
+    margin-top: 53px;
+  }
+  
+  .view-1 {
+    padding-left: 30px;
+    padding-right: 0px;
+    font-size: 18px;
+    align-content: left;
+  }
+  
+  .view-2 {
+    padding-left: 20px;
+    padding-right: 0px;
+    font-size: 18px;
+    align-content: left;
+  }
+  
+  .view-3 {
+    padding-left: 20px;
+    padding-right: 0px;
+    font-size: 18px;
+    align-content: left;
+  }
+  
+  
+  h2 {
+    display: inline-block;
+    margin-top: 5px;
+    margin-left: 30px;
+    padding-top: 35px;
+    font-size: 40px;
+  }
+  
+  a {
+    display: inline-block;
+    font-size: 24x;
+    font-family: Tahoma, sans-serif;
+  }
+  
+  hr.solid {
+      border-top: 1px solid #bbb;
+      margin-right: 70px;
+      margin-left: 40px;
+  }
+  
+  /*filter*/
+  .name-filter {
+      display: inline-block;
+      margin-left: 20px;
+      margin-right: 20px;
+      padding-top: 30px;
+      width: 300px;
+  }
+  
+  .search-form {
+      display: inline-block;
+      background-color:#116CD4;
+      border-radius: 100px;
+      color: white;
+  }
+  
+  /*end filter */
+  
+  /*new piece*/
+  div.new-contact {
+    margin-left: 40px;
+    margin-right: 40px;
+      padding-left: 200px;
+      padding-top: 50px;
+  }
+  
+  h3 {
+    border: 3px solid #116CD4;
+    border-radius: 70px;
+    width: 175px;
+    height: 40px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-left: 10px;
+  }
+
+ 
+  h3 a {
+      display: inline-block;
+      padding-bottom: 20px;
+      font-family: sans-serif;
+      font-size: 16px;
+      font-weight: bolder;
+      color: #191847;
+  }
+  
+  /*end new piece */
+  
+  
+  /*filter row*/
+  .divider {
+    padding-bottom: 0;
+  }
+  
+  .divider ul {
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #191847;
+    padding-left: 20px;
+    padding-right: 0px;
+  }
+  
+  #filter-filter {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+  
+  /*end filter */
+  
+
+/*inner container*/
+.container-2 {
+    margin-left: 10px;
+    background-color: white;
+    font-size: 10px;
+    width: 95%;
+    height: fit-content;
+  }
+  
+
+/*col headers*/
+div.header-row {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-left: 0;
+    font-weight: bolder;
+    color: #191847; 
+}
+
+ul.contact-name {
+    display: inline;
+    margin: auto;
+    padding-left: 80px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #191847;
+}
+
+ul.contact-email {
+    display: inline;
+    margin-left: 100px;
+    margin-right: 0;
+    padding-left: 160px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #191847;
+}
+
+ul.contact-phone-number {
+    display: inline;
+    padding-left: 130px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #191847;
+}
+
+ul.contact-title {
+    display: inline;
+    padding-left: 60px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #191847;
+}
+
+ul.contact-company {
+    display: inline;
+    padding-left: 60px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #191847; 
+}
+
+
+
+/*content*/
+div.details-row {
+    margin-left: 0px;
+    margin-left: 0;
+    font-size: 20px;
+    color: #191847; 
+}
+
+ul.name-detail {
+    align-content: left;
+}
+
+/*
+div.details-row {
+    width: fit-content;
+    font-size: 12px;
+}
+
+
+li, a {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    vertical-align: center;
+}
+
+li.photo {
+    display: inline-block;
+    margin: auto;
+    width: 100px;
+    padding-left: 60px;
+    padding-right: 15px;
+}
+
+img {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+    padding-right: 5px;
+}
+/*
+li.name-detail {
+    display: inline-block;
+    margin: auto;
+    width: 10px;
+}
+
+
+li.name-detail a {
+    width: 150px;
+    font-size: 12px;
+    align-content: center;
+    padding-left: 70px;
+    padding-right: 0;
+}
+
+/*
+li.email-detail {
+    display: inline-block;
+    margin: auto;
+    width: 80px;
+    padding: 25px;
+}
+
+
+li.email-detail a {
+    display: inline-block;
+    margin-left: 50px;
+    padding-left: 10px;
+    padding-right: 0px;
+}
+
+
+li.phone-detail a {
+    position: relative;
+    align-content: center;
+    width: 120px;
+    margin-left: 80px;
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+li.title-detail a {
+    position: relative;
+    padding-left: 30px;
+}
+
+li.company-detail a {
+    position: relative;
+    padding-left: 240px;
+    width: fit-content;
+}
+
+
+/*
+li.phone-detail {
+    display: inline-block;
+    margin: auto;
+    width: 200px;
+}
+
+
+li.title-detail {
+    display: inline;
+    margin: auto;
+    width: 25px;
+}
+
+li.company-detail {
+    display: inline;
+    margin: auto;
+    width: 100px;
+    padding-left: 0px;
+}
+
+
+/*test*/
+#movers-row {
+    display: flex;
+  }
+  
+  div.details-row {
+      justify-content: space-evenly;
+  }
+
+#movers-row a ul {
+    justify-content: space-between;
+}
+
+  img {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+}
+
+/*new contact*/
+
+/*inner container*/
+.bi-telephone {
+    padding-top: 20px;
+}
