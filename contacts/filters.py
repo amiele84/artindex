@@ -16,6 +16,17 @@ class FilterContacts(django_filters.FilterSet):
         self.filters['contact_name_fields'].field.widget.attrs.update({'class': 'search-form'})
 
     def filter_by_contact_name_fields(self, queryset, name, value):
-            return queryset.filter(
+            qs = queryset.filter(
             Q(first_name__icontains=value) | Q(last_name__icontains=value)
         )
+            return qs
+
+
+import django_filters
+
+class ContactFilter_new(django_filters.FilterSet):
+    name = django_filters.CharFilter(lookup_expr='iexact')
+
+    class Meta:
+        model = Contact
+        fields = ['first_name', 'last_name']

@@ -1,0 +1,93 @@
+
+  /*inner container*/
+  div.container-2 {
+    margin-left: 0px;
+    background-color: white;
+    font-size: 10px;
+    width: 100%;
+    height: fit-content;
+  } /* controls 
+  piece list container */
+  
+
+  div.form-row {
+    padding-left: 50px;
+  } /* controls
+  all contents inside container 2 */
+
+
+
+
+/* contents of container 2 */
+div.form-group {} /* controls all fields in form */
+
+
+/* misc */
+
+div.contact-types {} /* controls contact-types */
+
+/* misc */
+
+
+
+/* pic */
+
+div.contact-pic {} /* controls contact pic */
+
+
+/* pic */
+
+
+
+/* name row  */
+
+div.first-name {} /* controls form first name */
+
+div.middle-name {} /* controls form middle name */
+
+div.last-name {} /* controls form last name */
+
+
+/* name row  */
+
+
+
+/* job row */
+
+div.job-title {} /* controls job title */
+
+div.company {} /* controls company */
+
+/* job row */
+
+
+
+/* contact rows */
+
+div.email {} /* controls email */
+
+div.phone-number {} /* controls company */
+
+/* contact rows */
+
+
+
+/* bday rows */
+
+div.birth-date {} /* controls birth-date */
+
+div.death-date {} /* controls death-date */
+
+
+/* bday rows */
+
+
+
+/* bio rows */
+
+div.bio {} /* controls bio */
+
+div.notes {} /* controls notes */
+
+
+/* bday rows */

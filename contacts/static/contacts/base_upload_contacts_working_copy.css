@@ -1,0 +1,797 @@
+    /* Start of In Use */
+
+
+    /*inner container*/
+    div.container-2 {
+    margin-left: 0px;
+    background-color: white;
+    font-size: 10px;
+    width: 100%;
+    height: 1000px;
+    } /* controls 
+    piece list container */
+
+    /*dropzone*/
+    .container-4 {
+    margin-left: 0px;
+    margin-bottom: 60px;
+    padding: 20px;
+    height: 1100px;
+    } /* controls 
+    boarder around dropzone */
+
+    div.container-6 {
+    padding-left: 150px;
+    }
+    
+
+    h5 {
+    margin-left: 50px; /* align w/ container-4 */
+    margin-top: 50px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #191847;
+    }
+
+    div.absolute {
+        /*
+        border: 2px solid black; */
+        position: absolute;
+        top: 100px;
+        right: 10px;
+    }/*controls container for piece data form */
+
+    div.image-box {
+        position: relative;
+        left: 125px;
+        bottom: -50px;
+    }
+    
+    div.upload-icon {
+        position: absolute;
+        bottom: 80px;
+        left: 75px;
+    }
+
+    div.image-default {
+        position: relative;
+        bottom: 80px;
+        left: 25px;
+    }
+    
+    
+                /*dropzone elements
+
+.dz {
+    height: 300px;
+    border: 2px solid !important;
+    border-color: #116CD4 !important;
+    border-radius: 10px !important;
+} /*controls dropzone area */
+
+.dz:hover {
+    background-color: aliceblue !important;
+}
+
+.dz-preview {
+} /*controls container around thumbnail
+
+
+.dz-file-preview {
+    padding-top: 10px;
+    padding-left: 100px;
+} /*controls container around thumbnail */
+
+.dz-size {
+    width:1px;
+    height:1px;
+    color:white;
+} /*controls size display */
+
+.dz-filename {
+    width:1px;
+    height:1px;
+    color:white;
+} /*controls name display */
+
+.dz-success-mark {
+    width:1px;
+    height:1px;
+    color:white;
+} /*controls name display */
+
+.dz-error-mark {
+    width:1px;
+    height:1px;
+    color:white;
+} /*controls name display */
+
+.dz-error-message {
+    width:1px;
+    height:1px;
+    color:white;
+} /*controls name display */
+
+
+.needsclick span {
+    font-size: 15px;
+    font-weight: bold;
+} /*controls text over btn*/
+
+.btn-container button {
+    display: inline;
+    background-color: #116CD4;
+    border-radius: 70px;
+    width: 150px;
+    padding: 10px 10px 10px 10px; 
+    color: white;
+} /*controls choose file button */
+
+
+
+    /*
+    .dropzone {
+    border: 1px solid #116CD4;
+    border-radius: 10px;
+    background-color:#EFF7FF;
+    width: 1120px;
+    height: 250px;
+    margin-left: 20px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #191847; 
+    
+    }
+    
+    
+                    /* End of In Use */
+
+    
+                    /* Start of Test */
+/*
+.dropzone {
+    height: fit-content;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    background: white;
+    padding: 20px 20px; }
+*/ 
+
+/* 9/24 */
+.upload_piece_gallery {
+    display: flex; 
+    flex-direction: column; /*9/21*/   
+}
+
+.upload_piece_gallery a {
+        position: absolute; /*9/21*/
+        display: inline-block;
+        height: 300px;
+        width: 300px; /*9/21*/
+    }
+
+.upload_piece_gallery img {
+        object-position: center;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+/*below is copied from 'base_test_upload_091921' on 9/26*/
+    
+    
+
+/* 9/7*
+.full-form-class {
+    margin-top: 10px; /*9/26
+    padding-left: 200px;
+    width: 1200px;
+    border: 1px solid blue;
+    /*border: 5px solid black;*/
+} /* controls left side rn 
+
+
+/* left */
+
+/* 9/1 */
+div.left-side-row {  
+}
+
+/* 9/4 
+.column{
+    width: 300px;
+}
+
+/* 9/3 
+.left-side-column {
+    margin-left: 75px;
+    margin-right: 65px;
+    display: inline-block;
+    float: left;
+    border: 5px solid green;
+    border-radius: 10px;
+}
+*/
+/*
+div.left-side-divison {
+    border: 10px solid blue;
+
+}
+
+/* */
+
+/* left */
+
+
+/* 
+.right-side-column {
+    display: inline-block;
+    padding-left: 50px;
+    float: left;
+    border: 5px solid green;
+    border-radius: 10px;
+}
+
+/* */
+div.right-side-divison {
+    margin-left: 50px;
+    border: 0px solid blue;
+}
+
+
+/* 9/3 */
+.fifth-box {
+    border: 0px solid #116CD4;
+    border-radius: 10px;
+}
+
+/* */
+
+
+
+/* 12-27 */ 
+div.cancel {
+    float: right;
+    border: gray;
+}
+
+div.submit {
+}
+
+
+/* 8/28 */
+input[type=text] {  
+    border: 0px solid #eaecee; /* 12-27 */
+    border-radius: 10px 10px 10px 10px; /* 12-27 */
+    color: #afb1b4;/* */
+    padding-left: 20px; /*
+    width: 330px;
+    height: 40px;*/
+}
+
+    /* */
+
+
+
+select {
+    width: 100%;
+    height: 40px;
+    padding:10px;
+    border-radius:10px;
+    font-size: 15px;
+    box-shadow:0 0 1px 1px #116CD4;
+}
+
+
+
+            /* overall form */
+
+/*01/09/22*/
+/*div-boxes*/
+div.box-1 {
+    position: relative;
+    width: 1100px;
+    bottom: 20px;
+    left: 60px;/*
+    bottom: 1075px;
+    left: 455px; 1/13*
+    border: 2px solid green; */
+}
+
+
+div.box-2 {
+    position: relative;
+    width: 1100px;
+    bottom: 0px;
+    left: 60px;/*
+    bottom: 1075px;
+    left: 455px; 1/13*
+    border: 2px solid green; /*
+    position: fixed;
+    bottom: 950px;
+    left: 455px;
+    width: 1100px;/*
+    border: 2px solid green; */
+}
+
+div.box-3 {
+    position: relative;
+    width: 700px;
+    top: 0px;
+    bottom: 1075px;
+    left: 465px; /*1/13* 
+    border: 2px solid green; /*
+    position: fixed;
+    bottom: 850px;
+    left: 465px;
+    width: 1100px;/*
+    border: 2px solid green; */
+}
+
+/* 1/19/22 */
+#theDIV {
+  
+    /* Set the width of element to 100% 
+    width: 10%;
+    
+    /* Set the top and bottom padding to 50px, right and left padding to 0px*
+    padding: 50px 0;
+    
+    /* Set the text alignment to the center 
+    text-align: center;
+    
+    /* Set the background colour to light green 
+    background-color: lightgreen;
+    
+    /* Set the top margin to 20px 
+    margin-top: 20px;
+    
+    /* Set the bottom margin to 10px 
+    margin-bottom: 10px; */
+  }
+
+  .button {
+    
+    /* Display the element as a block element */
+    display: block;
+
+    /* Center the element */
+    margin: 0 auto;
+    width: 120px;
+    background-color: white;
+    font-size: small;
+    color: #609dec;
+  }
+
+div.address-btn {
+    position: relative;
+    left: 265px; 
+    bottom: 775px;/*
+    border: 1px solid green;*/
+}
+
+div.box-4 {
+    position: absolute;
+    width: 1100px;
+    top: 150px;
+    left: 50px;/*
+    bottom: 1075px;
+    left: 455px; 1/13* 
+    border: 2px solid green; /*
+    position: fixed;
+    bottom: 850px;
+    left: 465px;
+    width: 1100px;/*
+    border: 2px solid green; */
+}
+
+div.box-5 {
+    position: absolute;
+    width: 1100px;
+    top: 250px;
+    left: 50px;/*
+    bottom: 1075px;
+    left: 455px; 1/13*
+    border: 2px solid green; /*
+    position: fixed;
+    bottom: 750px;
+    left: 465px;
+    width: 1100px;/*
+    border: 2px solid green; */
+}
+
+div.box-6 {
+    position: absolute;
+    width: 1100px;
+    top: 350px;
+    left: 50px;/*
+    left: 455px; 1/13* 
+    border: 2px solid green; /*
+    position: fixed;
+    bottom: 650px;
+    left: 465px;
+    width: 1100px;/*
+    border: 2px solid green; */
+}
+
+div.box-7 {
+    position: absolute;
+    width: 1100px;
+    top: 500px;
+    left: 125px;/*
+    bottom: 1075px;
+    left: 455px; 1/13* 
+    border: 2px solid green; /*
+    position: fixed;
+    bottom: 525px;
+    left: 510px;
+    width: 1100px;/*
+    border: 2px solid green; */
+}
+
+
+div.dims-row {
+    width: 600px;/*
+    border: 2px solid green; */
+}
+
+div.birth-box {
+}
+
+div.death-box {
+    padding-left: 45px;
+}
+
+div.dates-labels {
+    padding-left: 10px;
+}
+
+div.bio-label-box {
+    margin-left: 0px;
+}
+
+div.box-8 {
+    position: relative;
+    top: 50px;
+    left: 600px;
+    width: 400px;/*
+    border: 2px solid green; */
+}
+
+
+/* btn */
+/* 9/2 */
+div.btn-row {
+    position: absolute;
+    bottom: -400px;
+    left: 500px;
+    width: fit-content;
+    border-radius: 10px;
+} /* controls upload btn 
+
+
+/*Labels*/
+/*01/10*/
+div.birth-label {
+    padding-left: 0px;
+    padding-right: 150px;
+}
+
+div.death-label {}
+
+div.bio-label {
+    position: relative;
+    left: 10px;/*
+    margin-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 200px; */
+}
+
+div.notes-label {
+    position: relative;
+    top: 20px;
+    left: 10px;/*
+    margin-bottom: 0px;
+    padding-left: 15px;
+    padding-right: 200px;*/
+}
+
+
+
+/*text*/
+/*01/10*/
+div.add-address-row{
+    padding-left: 565px;
+    font-size: small;
+    color: #609dec;
+}
+
+div.add-frame-row{
+    padding-left: 75px;
+    font-size: small;
+    color: #609dec;
+}
+
+
+/*row1*/
+div.contact-image-class {
+    width: 0px;
+}
+div.first-name-class {
+    height: 45px; 
+    width: 300px; /* 12-27 */
+    border: 1px solid #a2c4f1;
+    border-radius: 10px 0px 0px 10px; /* 12-27 */
+    margin-left: 50px;
+    margin-right: 0px;
+    padding-left: 0px;
+} /*controls title field via form helper*/
+
+div.middle-name-class {
+    height: 45px; 
+    width: 290px; /* 12-27 */
+    border: 1px solid #a2c4f1;
+    border-radius: 0% 0% 0% 0%; /* 12-27 */
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+} /*controls title field via form helper*/
+
+div.last-name-class {
+    height: 45px; 
+    width: 300px; /* 12-27 */
+    border: 1px solid #a2c4f1;
+    border-radius: 0px 10px 10px 0px; /* 12-27 */
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+} /*controls title field via form helper*/
+
+
+/*row2*/
+div.job-class {
+    height: 45px; 
+    width: 400px; /* 12-27 */
+    border: 1px solid #a2c4f1;
+    border-radius: 10px 10px 10px 10px; /* 12-27 */
+    margin-left: 50px;
+    margin-right: 0px;
+    padding-left: 0px;
+}
+
+div.company-class {
+    height: 45px; 
+    width: 400px; /* 12-27 */
+    border: 1px solid #a2c4f1;
+    border-radius: 10px 10px 10px 10px;/* 12-27 */
+    margin-left: 90px;
+    margin-right: 0px;
+    padding-left: 0px;
+}
+
+
+/*row 3 */
+div.city-class {
+    position:relative;
+    top: 10px;
+    left: 75px;
+    height: 45px; 
+    width: 300px; /* 12-27 */
+    border: 1px solid #a2c4f1;
+    border-radius: 10px 0px 0px 10px; /* 12-27 */
+    margin-left: 50px;
+    margin-right: 0px;
+    padding-left: 0px;
+}
+
+div.state-class {
+    position:absolute;
+    top: 10px;
+    left: 245px;
+    height: 45px; 
+    width: 290px; /* 12-27 */
+    border: 1px solid #a2c4f1;
+    border-radius: 0% 0% 0% 0%; /* 12-27 */
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+
+}
+
+div.zip-class {
+    position:absolute;
+    top: 10px;
+    left: 365px;
+    height: 45px; 
+    width: 300px; /* 12-27 */
+    border: 1px solid #a2c4f1;
+    border-radius: 0px 10px 10px 0px; /* 12-27 */
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+}
+
+
+/* rows 4-6*/
+div.types-class {
+    padding-top: 55px;
+    width: 500px;
+} /*controls types field via form helper*/
+
+div.contact-class {
+    margin-left: 20px;
+    height: 45px; 
+    width: 275px; /* 12-27 */
+    border: 1px solid #a2c4f1;
+    border-radius: 10px 10px 10px 10px;/* 12-27 */
+} /*controls title field via form helper*/
+
+
+
+/*row 6*/
+/* 1/10 */
+div.birth-month-class {
+    width: 60px;
+    height: 55px;
+    border: 1px solid #96bfee;
+    border-radius: 15% 0% 0% 15%; /* 12-27 */
+    padding-left: 0px;
+    padding-top: 4px;
+}
+
+div.birth-day-class {
+    width: 60px;
+    height: 55px;
+    border: 1px solid #96bfee;
+    border-radius: 0% 0% 0% 0%; /* 12-27 */
+    padding-left: 0px;
+    padding-top: 4px;
+}
+
+div.birth-year-class {
+    width: 60px;
+    height: 55px;
+    border: 1px solid #96bfee;
+    border-radius: 0% 15% 15% 0%; /* 12-27 */
+    padding-left: 0px;
+    padding-top: 4px;
+}
+
+
+div.death-month-class {
+    width: 60px;
+    height: 55px;
+    border: 1px solid #96bfee;
+    border-radius: 15% 0% 0% 15%; /* 12-27 */
+    padding-left: 0px;
+    padding-top: 4px;
+}
+
+div.death-day-class {
+    width: 60px;
+    height: 55px;
+    border: 1px solid #96bfee;
+    border-radius: 0% 0% 0% 0%; /* 12-27 */
+    padding-left: 0px;
+    padding-top: 3px;
+}
+
+div.death-year-class {
+    width: 60px;
+    height: 55px;
+    border: 1px solid #96bfee;
+    border-radius: 0% 15% 15% 0%; /* 12-27 */
+    padding-left: 0px;
+    padding-top: 3px;
+}
+}
+
+div.dim-class {
+    padding-top: 3px;
+    padding-left: 60px;
+    width: 150px;
+}
+
+
+/*row7*/
+div.envelope-class {
+    padding-right: 40px;
+}
+
+
+div.description-class-bio {
+    border: 0px solid #96bfee;
+    border-radius: 0% 0% 5% 5%; /* 12-27 */
+    color: #116CD4;
+    width: 450px;
+    height: fit-content;
+} /*controls description field via form helper*/
+
+div.description-class-notes {
+    border: 0px solid #96bfee;
+    border-radius: 0% 0% 5% 5%; /* 12-27 */
+    color: #96bfee;
+    width: 500px;
+    height: 40px;
+    margin-top: 30px;
+} /*controls */
+
+
+textarea {
+    width: 200px;
+    height: 75px;
+    box-sizing: border-box;
+    border: 10px solid rgb(204, 204, 204);
+    border-radius: 60px 60px 60px 60px;
+    resize:unset;
+    
+} /* controls textarea inside description-class */
+
+
+
+
+/*9/28*/
+.dz-file-preview {
+    padding-top: 10px;
+    padding-left: 100px;
+    display: flex; 
+    flex-direction: column; /*9/21*/  
+} /*controls container around thumbnail */
+
+
+.dz-file-preview a {
+    position: absolute; /*9/21*/
+    display: inline-block;
+    height: 300px;
+    width: 300px; /*9/21*/
+}
+
+.dz-file-preview img {
+    position: absolute; /*9/21*/
+    display: inline-block;
+    object-position: center;
+}/*
+    z-index: -1; /*controls order of pics*/
+}
+/*  object-fit: cover;
+    height: 20%;
+    width: 20%;
+}
+
+
+/*10/02*/
+div.form-border {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border: 3px solid #73AD21;
+}/*controls both dzone & piece data form*/
+
+
+
+/*12-27 */
+div.signature-box {
+    padding-top: 25px;
+    padding-bottom: 100px;
+    height: 50px;
+}
+
+div.signature-label {
+    padding-left: 65px;
+
+}
+
+
+input.form-check-input {
+    width: 20px/*preferred width*/;
+    height: 20px/*preferred height*/;
+}
+
+div.signature-checkbox {
+    padding-left: 115px;
+
+}
+
+
+
+                    /* End  of Test */

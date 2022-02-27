@@ -1,0 +1,120 @@
+{% extends 'base_contacts_working_copy.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% crispy form %}
+
+{% block header %}
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<!-- custom css -->
+<link rel="stylesheet" href="{% static 'pieces/base_pieces_header_WK.css' %}">
+
+<div class="container-1">
+    <div class="row">
+      <h2>Add Piece</h2>
+        <div class="views">
+        </div>
+        <div class="tag-filter">
+        </div>
+      </div>
+    <div class="row">
+      {#<a href='#' onclick='overlay()'>Click here to show the overlay</a>#}
+    </div>
+      <hr class="solid">
+      <div class="divider">
+      </div>
+      <br>
+      <p></p>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    <!-- custom css & js -->
+    <link rel="stylesheet" href="{% static 'pieces/new1_and_pet_test_1228.css' %}">
+    <script src="{% static 'js_dzone/base_pieces_piece_only_WK_102621.js' %}" defer></script>
+
+    <!-- test js -->
+    <script src="{% static 'js_dzone/dzone_test.js' %}" defer></script>
+    
+    <!-- dropzone js  & css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+    <script scr="/Volumes/Lexar/django/artindex/pieces/static/dropzone-5.7.0/dist/dropzone.js"></script>
+
+    <!-- basic lightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"> <!-- 10/09 -->
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script> <!-- 10/09 -->
+
+    <div class="container-2" style="padding-top: 20px; border: 2px solid  #F6F6FA;">
+      <div class="form-border" >
+        <h5><strong>Upload Image</strong></h5>
+          <div class="container-4" id="dzone-container">
+            <form id="uploadpiece-widget" method="post" action=" " class="dropzone dz" enctype="multipart/form-data">
+              {% csrf_token %}
+
+              <div class="fallback">
+                <input name="image" type="file" multiple/>
+              </div>
+              <BR>
+              <BR>
+              <BR>
+
+              <!-- this places text inside dropzone -->
+              <DIV class="dz-message needsclick">    
+                <span>Drag and drop your art here</span>
+                <BR>
+                <BR>
+                  <span>or</span>
+                <BR>
+                <BR>
+                <BR>
+                  
+                  <!-- this redirects to 'upload/'-->
+                <div class='btn-container'>
+                  <button class='btn start' type="reset" id='changewidth'  
+                  onclick="document.getElementById('dzone-container').style='display: flex; flex-direction: column; width:70%; position: absolute;right: 0px;'">Choose a File</button>
+                </div>
+              </DIV>
+            </form>
+            
+          </div>
+  
+        <!-- if config previewsContainer = , displays image here -->
+        <div class="dz-preview dz-file-preview">
+          <div class="dz-details">
+            <div class="dz-filename"><span data-dz-name></span></div>
+            <div class="dz-size" data-dz-size></div>
+            <a href=""><img data-dz-thumnail src="" alt="" title="" /></a> <!-- image id here? 12/24 -->
+          </div>
+          <div class="dz-progress"><span data-dz-uploadprogress></span></div>
+          <div class="dz-success-mark"><span></span></div>
+          <div class="dz-error-mark"><span></span></div>
+          <div class="dz-error-message"><span data-dz-errormessage></span></div>
+        </div>
+
+
+      <div class='absolute'>
+        <!-- taken verbatim from formset_tutorial -->
+  
+        {% crispy upload_piece_form %}
+      
+        <!-- upload data form --
+        {{ upload_piece_form|crispy }}
+  
+        <!-- pic upload forms --
+        {{ formset.management_form }}
+        {% for form in formset %}
+        {{ form |crispy }}
+        {% endfor %}
+  
+        <!--   -->
+
+        <!-- test 10/10 -->
+      </div>
+      
+    </div>
+    </div>
+  </body>
+    {% endblock %}

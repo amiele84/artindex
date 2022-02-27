@@ -1,0 +1,57 @@
+
+/*inner container*/
+.container-2 {
+  margin-left:0px;
+  background-color: white;
+  font-size: 10px;
+  width: 100%;
+  height: fit-content;
+}
+
+
+/*content*/
+#movers-row {
+  display: flex;
+}
+
+div.details-row {
+  margin-left: 50px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  color: #191847; 
+ /* justify-content: space-evenly; */
+}
+
+
+/* detail contents */
+.photo ul {
+  padding-left: 30px;
+  padding-right: 0px;
+}
+
+img {
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+}
+
+div.name-detail {
+  margin-right: 100px;
+  margin-left: 0px;
+}
+
+div.med-detail {
+margin-left: 50px;
+}
+
+div.avail-detail {
+margin-left: 50px;
+}
+
+div.price-detail {
+margin-left: 100px;
+}
+
+div.dot-detail {
+margin-left: 80px;
+}

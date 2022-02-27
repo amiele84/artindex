@@ -135,16 +135,23 @@ class PieceInstance(models.Model):
         return '{0} ({1})'.format(self.id, self.title)
 
 
+            ## ##
 
 
 
-            ##IN USE##
+
+
+
+
+
+
 from django.utils.translation import ugettext_lazy as _
 from taggit.models import GenericUUIDTaggedItemBase, TaggedItemBase
 
+            ##in USE ##
 
 class Tag(models.Model):
-    tag = models.CharField(max_length=10)
+    tag = models.CharField(max_length=10, blank=True)
 
     def __str__(self):
         return '{0}, {1}'.format(self.tag)
@@ -162,14 +169,19 @@ class UUIDTaggedItem(GenericUUIDTaggedItemBase, TaggedItemBase):
 
 
 
+from datetime import date
+from django.core import validators
+#from validators import maxValueValidator
+
 class NewPiece(models.Model):
+
     #model title for all instances
     #title = models.CharField(max_length=200)
     id = models.UUIDField(primary_key=True,
     default=uuid.uuid4, help_text="Unique ID for this piece instance")
 
     #has many-to-one relation w/ artist
-    artist = models.ForeignKey('Artist', on_delete=models.SET_NULL, null=True)
+    artist = models.ForeignKey('Artist', on_delete=models.SET_NULL, null=True, blank=True)
 
     #has many-to-one relation with uploader
     #currently just entering "username" as field 
@@ -181,17 +193,38 @@ class NewPiece(models.Model):
     
     
     #textfields
-    title = models.CharField(max_length=200)
-    description = models.TextField(max_length=500, help_text="Add Description", blank=True)
+    title = models.CharField(max_length=200, blank=True)
+    description = models.TextField(max_length=500, blank=True)
     medium = models.CharField(max_length=200, blank=True)
     subject_matter = models.CharField(max_length=200, blank=True)
     location = models.CharField(max_length=200, blank=True)
     
     #numeric
-    width = models.IntegerField(blank=True)
-    height = models.IntegerField(blank=True)
-    depth = models.IntegerField(blank=True)
-    price = models.IntegerField(blank=True)
+    #today = date.today()
+    #year = models.IntegerField(validators=[validators.MaxValueValidator(9999)], default=today.year)
+    #month = models.IntegerField(validators=[validators.MaxValueValidator(99)], blank=False,default=today.month)
+    #day = models.IntegerField(validators=[validators.MaxValueValidator(99)], blank=False, default=today.day)
+
+    year = models.CharField(max_length=4, default="YY")
+    month = models.CharField(max_length=2, default="MM")
+    day = models.CharField(max_length=2, default="DD")
+
+    #width = models.IntegerField(blank=True)
+    #height = models.IntegerField(blank=True)
+    #depth = models.IntegerField(blank=True)
+
+    width = models.CharField(max_length=3, default="W")
+    height = models.CharField(max_length=3, default="H")
+    depth = models.CharField(max_length=3, default="D")
+
+    #price = models.IntegerField(blank=True)
+    price = models.CharField(max_length=10, blank=False, default='Add Price')
+
+    #edition_num = models.IntegerField(blank=False, default=00) #12-27
+    #edition_dom = models.IntegerField(blank=False, default=00) #12-27
+    
+    edition_num = models.CharField(max_length=3, default='000') #12-27
+    edition_dom = models.CharField(max_length=3, default='000') #12-27
     
     #img
     #change upload dir to 'artindex/uploads/pieces/'
@@ -204,6 +237,7 @@ class NewPiece(models.Model):
     #many to many relations
     #dics
     PIECE_TYPES = (
+        #('Add Type', 'ADD TYPE'), #12-27
         ('painting', 'PAINTING'),
         ('sculpture', 'SCULPTURE'),
         ('textile', 'TEXTTILE'),
@@ -233,34 +267,30 @@ class NewPiece(models.Model):
     types = models.CharField(
         max_length=10,
         choices=PIECE_TYPES,
-        blank=True,
-        #default='none',
-        help_text='type')
+        blank=False,
+        default = 'painting')
 
     dim = models.CharField(
         max_length=15,
         choices=PIECE_DIM,
-        blank=True,
-        #default='none',
-        help_text='type')
+        blank=False,
+        default = 'inches')
     
     visibility = models.CharField(
         max_length=10,
         choices=PIECE_VISIBILITY,
-        blank=True,
-        #default='none',
-        help_text='type')
+        blank=False,
+        default = 'PRIVATE')
 
     availability = models.CharField(
         max_length=10,
         choices=PIECE_AVAILABILITY,
-        blank=True,
-        #default='none',
-        help_text='type')
+        blank=False,
+        default='Unfinished')
         
     #tags
     #unsure how to do this rn
-    tags = TaggableManager(through=UUIDTaggedItem)
+    tags = TaggableManager(through=UUIDTaggedItem, blank=True, help_text = "")
 
     #str represetations of model
     def __str__(self):
@@ -280,8 +310,217 @@ class NewPiece(models.Model):
         return reverse('detail', args=[str(self.id)])
 
 
+                ##end of in use##
+ 
 
-##end of in use##
+
+
+                ## test ##
+
+#piece-dta-only class
+class DataOnly(models.Model):
+    title = models.CharField(max_length=120)
+
+    def __str__(self):
+        return self.title 
+
+
+
+#pic only class
+class PicOnly(models.Model):
+    upload_pic = models.ImageField(upload_to='images/')
+    piece = models.ForeignKey(DataOnly, on_delete=models.CASCADE, related_name='images', null=True, blank=True)
+
+    def __str__(self):
+        return str(self.pk)
+
+
+
+###8/23
+#using actual code from: https://github.com/EngineerToDeveloper/photo-gallery-tutorial/blob/main/pages/models.py
+class Pet(models.Model):
+    name = models.CharField(max_length=120)
+
+    def __str__(self):
+        return self.name
+
+def upload_gallery_image(instance, filename):
+    return f"images/{instance.pet.name}/gallery/{filename}"
+
+class Image(models.Model):
+    image = models.ImageField(upload_to=upload_gallery_image)
+    pet = models.ForeignKey(Pet, on_delete=models.CASCADE, related_name="images")
+
+
+
+###9/25
+#combining new1/ w/ pet
+class UploadPiece(models.Model):
+    title = models.CharField(max_length=120)
+
+    def __str__(self):
+        return self.name
+
+
+
+def upload_piece_image(instance, filename):
+    return f"images/{instance.data.title}/gallery/{filename}"
+
+
+class PieceImage(models.Model):
+    image = models.ImageField(upload_to=upload_piece_image)
+    data = models.ForeignKey(UploadPiece, on_delete=models.CASCADE, related_name="images")
+    #data = models.ForeignKey(NewPiece2, on_delete=models.CASCADE, related_name="images")
+
+
+##10/11##
+#from: https://www.geeksforgeeks.org/update-view-function-based-views-django/
+# declare a new model with a name "GeeksModel"
+class GeeksModel(models.Model):
+ 
+    # fields of the model
+    title = models.CharField(max_length = 200)
+    description = models.TextField()
+    upload_pic = models.ImageField(upload_to='GeeksModels/images/', blank=True) #10/12
+ 
+    # renames the instances of the model
+    # with their title name
+    def __str__(self):
+        return self.title
+
+
+##10/26##
+class NewPiece2(models.Model):
+    #model title for all instances
+    #title = models.CharField(max_length=200)
+    id = models.UUIDField(primary_key=True,
+    default=uuid.uuid4, help_text="Unique ID for this piece instance")
+
+    #has many-to-one relation w/ artist
+    artist = models.ForeignKey('Artist', on_delete=models.SET_NULL, null=True, blank=True)
+
+    #has many-to-one relation with uploader
+    #currently just entering "username" as field 
+    #should work just based on upload
+    #currently a workaround 
+    #uploader = models.CharField(max_length=200)
+    #user = models.ForeignKey(User, default=1, on_delete=models.CASCADE)
+    #uploader = models.ForeignKey(User, related_name ="newpiece_creator_set", on_delete=models.CASCADE) #default=User, null=True, blank=True, on_delete=models.CASCADE)#, null=True)
+    
+    
+    #textfields
+    title = models.CharField(max_length=200, blank=True)
+    description = models.TextField(max_length=500, blank=True)
+    medium = models.CharField(max_length=200, blank=True)
+    subject_matter = models.CharField(max_length=200, blank=True)
+    location = models.CharField(max_length=200, blank=True)
+    
+    #numeric
+    width = models.IntegerField(blank=True)
+    height = models.IntegerField(blank=True)
+    depth = models.IntegerField(blank=True)
+    price = models.IntegerField(blank=True)
+    
+    #img
+    #change upload dir to 'artindex/uploads/pieces/'
+    #piece_upload = models.ImageField(upload_to='images/')
+
+    #etc user enter
+    date_of_upload = models.DateField(null=True, blank=True)
+
+
+    #many to many relations
+    #dics
+    PIECE_TYPES = (
+        ('Add Type', 'ADD TYPE'),
+        ('painting', 'PAINTING'),
+        ('sculpture', 'SCULPTURE'),
+        ('textile', 'TEXTTILE'),
+        ('photograph', 'PHOTOGRAPH'),
+        ('none', 'NONE'),
+    )
+
+    PIECE_DIM = (
+        ('inches', 'INCHES'),
+        ('centimeters', 'CENTIMETERS'),
+    )
+
+        
+    PIECE_VISIBILITY = (
+        ('Private', 'PRIVATE'),
+        ('Public', 'PUBLIC'),
+    )
+
+    PIECE_AVAILABILITY = (
+        ('Unfinished', 'UNFINISHED'),
+        ('Complete', 'COMPLETE'),
+        ('Pending', 'PENDING'),
+        ('Sold', 'SOLD'),
+    )
+
+    #fields
+    types = models.CharField(
+        max_length=10,
+        choices=PIECE_TYPES,
+        blank=False,
+        default = 'UNFINISHED')
+
+    dim = models.CharField(
+        max_length=15,
+        choices=PIECE_DIM,
+        blank=True)
+    
+    visibility = models.CharField(
+        max_length=10,
+        choices=PIECE_VISIBILITY,
+        blank=False,
+        default = 'PRIVATE')
+
+    availability = models.CharField(
+        max_length=10,
+        choices=PIECE_AVAILABILITY,
+        blank=False,
+        default='Unfinished')
+        
+    #tags
+    #unsure how to do this rn
+    tags = TaggableManager(through=UUIDTaggedItem, blank=True)
+
+    #str represetations of model
+    def __str__(self):
+        return self.title
+    
+    #test
+    @property
+    def is_today(self):
+        if date_of_upload == date.today():
+            return True
+        return False
+
+    class Meta:
+        ordering = ['artist', 'title']
+    
+    def get_absolute_url(self):
+        return reverse('detail', args=[str(self.id)])
+
+
+#taking GeeksModel and mixing with multiple upload models above
+class PieceImage2(models.Model):
+    image = models.ImageField(upload_to=upload_piece_image)
+    data = models.ForeignKey(NewPiece2, on_delete=models.CASCADE, related_name="images")
+
+
+## end of test ##
+
+
+
+
+
+
+
+
+
+
 
 
 

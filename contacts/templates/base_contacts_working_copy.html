@@ -12,7 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="{% static 'contacts/contacts_list3222021.css' %}">
+  <link rel="stylesheet" href="{% static 'contacts/base_contacts_WK.css' %}">
   <script>
     function overlay() {
 	el = document.getElementById("overlay");
@@ -28,23 +28,23 @@
          
           <ul class="sidebar-nav">
             <h1><strong>Art-Index</strong></h1>
-            <ul class="nav-artwork">{% svg 'nav-artwork' %}<a href="{% url 'artwork:pieces' %}"><strong>Artwork</strong></a></ul>
+            <ul style='padding-bottom: 15px;'>{% svg 'nav-artwork' %}<a style="font-family:Arial, Helvetica, sans-serif; font-size: 14px;" href="{% url 'artwork:pieces' %}">Artwork</a></ul>
             <br>
-            <ul class='nav-locations'>{% svg 'nav-locations' %}<a href=""><strong>Location</strong></a></ul>
+            <ul style='padding-bottom: 15px; padding-left: 5px; align-content: center;'>{% svg 'nav-locations' %}<a style="font-family:Arial, Helvetica, sans-serif; font-size: 14px;">Location</a></ul>
             <br>
-            <ul class='nav-exhibtions'>{% svg 'nav-exhibitions' %}<a href=""><strong>Exhibitions</strong></a></ul>
+          <ul style='padding-bottom: 10px; padding-left: 20px; align-content: center'>{% svg 'nav-exhibitions' %}<a style="font-family:Arial, Helvetica, sans-serif; font-size: 14px;" href="">Exhibitions</a></ul>
             <br>
-            <ul class='nav-schedule'>{% svg 'nav-schedule' %}<a href="{% url 'schedule:calendar' %}"><strong>Schedule</strong></a></ul>
+            <ul style='padding-bottom: 15px; padding-left: 10px; align-content: center'>{% svg 'nav-schedule' %}<a style="font-family:Arial, Helvetica, sans-serif; font-size: 14px;" href="{% url 'schedule:calendar' %}">Schedule</a></ul>
             <br>
-            <ul class='nav-contacts'>{% svg 'nav-contacts' %}<a href="{% url 'contacts:contacts' %}"><strong>Contacts</strong></a></ul>
+            <ul style='padding-bottom: 15px; padding-left: 10px; align-content: center'>{% svg 'nav-contacts' %}<a style="font-family:Arial, Helvetica, sans-serif; font-size: 14px;" href="{% url 'contacts:contacts' %}">Contacts</a></ul>
             <br>
-            <ul class='nav-income'>{% svg 'nav-income' %}<a href=""><strong>Income</strong></a></ul>
+            <ul style='padding-bottom: 15px; padding-left: 0px;'>{% svg 'nav-income' %}<a style="font-family:Arial, Helvetica, sans-serif; font-size: 14px;" href="">Income</a></ul>
             <br>
-            <ul class='nav-reports'>{% svg 'nav-reports' %}<a href=""><strong>Reports</strong></strobng></a></ul>
+            <ul style='padding-bottom: 15px; padding-left: 0px;'>{% svg 'nav-reports' %}<a style="font-family:Arial, Helvetica, sans-serif; font-size: 14px;" href="">Reports</a></ul>
             <br>
-            <ul class='nav-my-docs'>{% svg 'nav-my-docs' %}<a href=""><strong>My Docs</strong></strobg></a></ul>
+            <ul style='padding-bottom: 15px; padding-left: 2px;'>{% svg 'nav-my-docs' %}<a style="font-family:Arial, Helvetica, sans-serif; font-size: 14px;" href="">My Docs</a></ul>
             <br>
-            <ul class='nav-insights'>{% svg 'nav-insights' %}<a href=""><strong>Insights</strong></a></ul>
+            <ul style='padding-bottom: 15px; padding-left: 5px;'>{% svg 'nav-insights' %}<a style="font-family:Arial, Helvetica, sans-serif; font-size: 14px;" href="">Insights</a></ul>
             <br>
             <br>
             {% if user.is_authenticated %}
@@ -81,7 +81,7 @@
         crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    
+
       {% block script %}
       {% endblock %}
 </body>

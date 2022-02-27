@@ -8,3 +8,6 @@ class ContactAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Contact)
+admin.site.register(Contact_test) #01/19/22
+admin.site.register(ContactImage)
+admin.site.register(Company)

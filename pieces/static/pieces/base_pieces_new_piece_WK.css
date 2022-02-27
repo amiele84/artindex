@@ -1,0 +1,188 @@
+
+/*inner container*/
+  div.container-2 {
+    margin-left: 0px;
+    background-color: white;
+    font-size: 10px;
+    width: 100%;
+    height: fit-content;
+  } /* controls 
+  piece list container */
+  
+
+  /*dropzone*/
+  .container-4 {
+    border: 3px solid #116CD4;
+    border-radius: 10px;
+    width: 1200px;
+    height: 250px;
+    margin-left: 80px;
+    margin-bottom: 60px;
+    padding: 20px;
+  } /* controls 
+  boarder around dropzone */
+  
+
+  h5 {
+    margin-left: 80px; /* align w/ container-4 */
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #191847;
+  }
+  
+  .dropzone {
+    border: 1px solid #116CD4;
+    border-radius: 10px;
+    background-color:#EFF7FF;
+    width: 820px;
+    height: 200px;
+    margin-left: 300px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #191847; 
+  
+  }
+  
+  
+
+/* contents of container 2 */
+div.form-group {
+  padding-left: 40px;
+} /* controls all fields in form */
+
+/* left col */
+
+div.form-title {
+  width: 550px;
+} /* controls form title */
+
+div.form-description {
+  width: 550px;
+} /* controls form title */
+
+div.form-artist {
+  width: 550px;
+} /* controls form artist */
+
+div.form-types {
+  width: 550px;
+} /* controls form types */
+
+div.form-medium {
+  width: 550px;
+} /* controls form medium */
+
+div.form-subject {
+  width: 550px;
+} /* controls form subject */
+
+div.form-location {
+  width: 550px;
+} /* controls form location */
+
+div.form-date {
+  width: 200px;
+} /* controls form date */
+
+div.form-visibility {
+  width: 200px;
+} /* controls form available */
+
+/* left col */
+
+
+/* right col */
+
+div.form-height {} /* controls form height */
+
+div.form-width {} /* controls form width */
+
+div.form-depth {} /* controls form depth */
+
+div.form-dim {} /* controls form height */
+
+div.form-availability {} /* controls form availability */
+
+div.form-price {} /* controls form price */
+
+div.form-tags {} /* controls form tags */
+
+/* right col */
+
+
+
+                    /* test */
+
+
+/*
+input, textarea {
+  font-family:inherit;
+  font-size: inherit;
+}
+
+
+input[type=text] {
+  border: 2px solid #116CD4;
+  border-radius:25px;
+  color: #116CD4;
+}
+
+
+input[type=number] {
+  padding:10px;
+  margin:10px;
+  border: 1px;
+  box-shadow:0 0 15px 4px green;
+  border-radius:10px;
+}
+
+.border-bottom-input {
+  border:0; // remove default border
+  border-bottom:1px solid #eee; // add only bottom border
+}
+
+textarea {
+  width:100%;
+  resize: vertical;
+  padding:15px;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  height:150px;
+}
+
+select {
+  width: 100%;
+  padding:10px;
+  border-radius:10px;
+  box-shadow:0 0 15px 4px red;
+}
+*/
+
+/* 8/25
+taken from: https://blog.logrocket.com/how-to-style-forms-with-css-a-beginners-guide/ 
+*/
+input[type=text] {
+  padding:0px;
+  margin:0px 0; // add top and bottom margin
+
+  border: 2px solid #116CD4;
+  border-radius:25px;
+  color: #116CD4;
+}
+
+textarea {
+  width:100%;
+  resize: vertical;
+  padding:0px;
+  border-radius:15px;
+  border:0;
+  box-shadow:4px 4px 10px rgba(0,0,0,0.06);
+  height:150px;
+}
+
+
+                    /* test */

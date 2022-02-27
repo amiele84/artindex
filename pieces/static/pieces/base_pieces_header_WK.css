@@ -1,0 +1,134 @@
+/*Outer/header*/
+/*Outer/header*/
+.container-1 {
+    background-color: #F6F6FA;
+    width: 1400px;
+    height: fit-content;
+    margin-right: 15px;
+    padding-top: 0px;
+    font-family: Verdana;
+  
+  } /* controls width of header & content  
+  overriding the base pieces one */
+
+  .pieces-list { 
+    margin: 0px;
+  } /* for title, 
+  views, filter, newpiece */
+
+  div.page-title {
+    margin-left: 4px;
+  }
+  
+  div.views {
+    padding-top: 38px;
+  } /* controls all three views */
+  
+  h2 {
+    display: inline-block;
+    margin-left: 30px;
+    padding-top: 15px;
+    font-size: 50px;
+  } /* page title */
+  
+  a {
+    display: inline-block;
+    font-size: 24x;
+    font-family: Tahoma, sans-serif;
+  }
+  
+  ul.view-1 {
+    display: inline-block;
+    padding-left: 20px;
+  }
+  
+  ul.view-2 {
+    display: inline-block;
+  }
+  
+  ul.view-3 {
+    display: inline-block;
+    padding-right: 10px;
+  
+  }
+  
+  hr.solid {
+      border-top: 1px solid #bbb;
+      margin-right: 30px;
+      margin-left: 30px;
+  } /* dividing line */
+  
+  /*filter*/
+.tag-filter {
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 20px;
+    padding-top: 30px;
+    width: 350px;
+}
+
+  
+  
+  .search-form {
+      display: inline-block;
+/*      background-color:#116CD4; */
+      background-color: white;
+      border-radius: 100px;
+      color: white;
+  }
+  
+  /*end filter */
+  
+  /*new piece*/
+  div.new-piece {
+    margin-left: 40px;
+      padding-left: 385px;
+      padding-top: 25px;
+      padding-right: 10px;
+      display:block;
+  }
+
+  div.new-piece h3 {
+    border: 3px solid #116CD4;
+    border-radius: 100px;
+    width: 190px; /*adjust these to get bigger font */
+    height: 45px;
+    padding-left: 40px;
+  }
+  
+  .new-piece h3 span {  
+    top: 0px; 
+    position: relative;
+  }
+  
+
+  div.new-piece h3 span a{
+    position: relative;
+    padding-left: 0px;
+  }
+  
+  
+  /*end new piece */
+  
+  
+  /*filter row*/
+  .divider {
+    padding-bottom: 0;
+  }
+  
+  .divider ul {
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #191847;
+    padding-left: 40px;
+    padding-right: 0px;
+  } /* controls all items inside divider */
+  
+  #filter-filter {
+    padding-left: 40px;
+    padding-right: 20px;
+  }
+  
+  /*end filter */
+  

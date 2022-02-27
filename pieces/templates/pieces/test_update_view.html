@@ -1,0 +1,77 @@
+{% extends 'base_pieces_working_copy.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% crispy form %}
+
+{% block header %}
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<!-- custom css -->
+<link rel="stylesheet" href="{% static 'pieces/base_pieces_header_WK.css' %}">
+
+<div class="container-1">
+    <div class="row">
+      <h2>Add Piece</h2>
+        <div class="views">
+        </div>
+        <div class="tag-filter">
+        </div>
+      </div>
+    <div class="row">
+      {#<a href='#' onclick='overlay()'>Click here to show the overlay</a>#}
+    </div>
+      <hr class="solid">
+      <div class="divider">
+      </div>
+      <br>
+      <p></p>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    <!-- custom css & js -->
+    <link rel="stylesheet" href="{% static 'pieces/new1_and_pet_test.css' %}">
+    <script src="{% static 'js_dzone/base_pieces_piece_only_WK_102621.js' %}" defer></script>
+
+    <!-- test js -->
+    <script src="{% static 'js_dzone/dzone_test.js' %}" defer></script>
+    
+    <!-- dropzone js  & css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+    <script scr="/Volumes/Lexar/django/artindex/pieces/static/dropzone-5.7.0/dist/dropzone.js"></script>
+
+    <!-- basic lightbox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"> <!-- 10/09 -->
+    <script src="https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"></script> <!-- 10/09 -->
+
+    <div class="container-2" style="padding-top: 20px;">
+      <div class="form-border">
+        <h5><strong>Upload Image</strong></h5>
+        <div class="main">
+            <!-- Create a Form -->
+            <form method="POST" enctype="multipart/form-data" action="/test/{{ obj.id }}/update/"> <!-- 10/26 -->
+                <!-- Security token by Django -->
+                {% csrf_token %}
+         
+                <!-- form as paragraph -->
+                {{ form.as_p }}
+         
+                <input type="submit" value="Update">
+            </form>
+         
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div class='upload_pic'>
+            <p><strong>{{ obj.title }}</strong></p>
+            <a href="{{ obj.upload_pic.url }}"><img src="{{ obj.upload_pic.url }}" alt="Smiley face" width="250" height="250"></a>
+        </div>
+    </div>
+    </div>
+  </body>
+    {% endblock %}

@@ -1,0 +1,30 @@
+
+
+/*inner container*/
+.container-2 {
+    margin-left:0px;
+    padding-left: 0px;
+    background-color: white;
+    font-size: 10px;
+    width: 100%;
+    height: fit-content;
+  }
+
+
+.pic-row {
+    background-color: white;
+    display: inline-block;
+    margin-left: 10px;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-left: 80px;
+}
+
+img {
+    box-shadow: 5px 10px 10px 10px;
+    border-radius: 100%;
+}
+
+.name-row {
+    padding-top: 15px;
+}

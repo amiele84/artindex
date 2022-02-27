@@ -41,21 +41,26 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'pieces.apps.PiecesConfig',
     'schedule.apps.ScheduleConfig',
     'contacts.apps.ContactsConfig',
+    'scrapbook1.apps.Scrapbook1Config', #may not be right
+
     'crispy_forms',
     'svg',
     'django_mysql',
     'taggit',
 ]
 
+##sets different templates for crispy forms
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', #2/26
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -155,3 +160,10 @@ LOGIN_REDIRECT_URL = '/pieces/'
 
 #logs emails
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# 2/26
+#STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+#STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'

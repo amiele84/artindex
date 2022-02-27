@@ -1,0 +1,20 @@
+.photo_gallery {
+    display: flex; 
+    flex-direction: column; /*9/21*/   
+}
+
+.photo_gallery a {
+        position: absolute; /*9/21*/
+        display: inline-block;
+        height: 300px;
+        width: 300px; /*9/21*/
+    }
+
+.photo_gallery img {
+        object-position: center;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    

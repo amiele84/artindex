@@ -1,0 +1,54 @@
+{% extends 'base_pieces_working_copy.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% crispy form %}
+
+{% block header %}
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<!-- custom css -->
+<link rel="stylesheet" href="{% static 'pieces/base_pieces_header_WK.css' %}">
+
+<div class="container-1">
+    <div class="row">
+      <h2>Add Piece</h2>
+        <div class="views">
+        </div>
+        <div class="tag-filter">
+        </div>
+      </div>
+    <div class="row">
+      {#<a href='#' onclick='overlay()'>Click here to show the overlay</a>#}
+    </div>
+      <hr class="solid">
+      <div class="divider">
+      </div>
+      <br>
+      <p></p>
+{% endblock %}
+
+
+{% block content %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+<div class="row">
+    <div class="col-6 offset-md-3">
+        <form id="pet_form" method="post" action="." enctype="multipart/form-data">
+
+            {% csrf_token %}
+
+            {{ pet_form|crispy }}
+
+            {{ formset.management_form }}
+            {% for form in formset %}
+            {{ form|crispy }}
+            {% endfor %}
+
+            <input type="submit" name="submit" value="Submit" />
+        </form>
+    </div>
+</div>
+  </body>
+
+  {% endblock %}

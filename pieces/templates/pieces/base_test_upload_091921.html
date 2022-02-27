@@ -1,0 +1,62 @@
+{% extends 'base_pieces_working_copy.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% crispy form %}
+
+{% block header %}
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{% static 'pieces/base_pieces_header_WK.css' %}">
+
+<div class="container-1">
+    <div class="row">
+      <h2>Add Piece</h2>
+        <div class="views">
+        </div>
+        <div class="tag-filter">
+        </div>
+      </div>
+    <div class="row">
+      {#<a href='#' onclick='overlay()'>Click here to show the overlay</a>#}
+    </div>
+      <hr class="solid">
+      <div class="divider">
+      </div>
+      <br>
+      <p></p>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    <!-- custom cs -->
+
+    <link rel="stylesheet" href="{% static 'pieces/base_test_upload_091921.css' %}">
+    
+    <!--           -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+    <script scr="/Volumes/Lexar/django/artindex/pieces/static/dropzone-5.7.0/dist/dropzone.js"></script>
+    
+  
+    <div class="container-2" style="padding-top: 20px;">
+      <h5><strong>Upload Image</strong></h5>
+        <div class="container-4">
+        <br>
+        <br>
+    </div>
+    <div class="col-md-12 form-container">
+        <form method="POST" enctype="multipart/form-data"> 
+            {% csrf_token %}
+            <div class="container-2">
+                {% crispy test_form %}
+            </div> 
+            <br>
+            <br>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit<a href="{% url 'artwork:pieces' %}"></a></button>
+        </form>
+    </div>
+{% endblock %}

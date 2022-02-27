@@ -27,6 +27,10 @@ from schedule.urls import *
 from contacts.views import *
 from schedule.urls import *
 
+##test 12-24
+from scrapbook1.views import *
+from scrapbook1.urls import *
+
 
 from django.views.generic.base import TemplateView # new
 
@@ -55,6 +59,13 @@ urlpatterns += [
 #urlpatterns += [
 #    path('accounts/', include('django.contrib.auth.urls')),
 #]
+
+##urlconf for scrapbook tutorial
+#taken from: https://www.pluralsight.com/guides/work-with-ajax-django
+urlpatterns += [
+    path('', include('scrapbook1.urls')),
+]
+
 
 
 ##static files

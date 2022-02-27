@@ -1,0 +1,290 @@
+/*inner container*/
+div.container-2 {
+    margin-left: 0px;
+    background-color: white;
+    font-size: 10px;
+    width: 100%;
+    height: fit-content;
+  } /* controls 
+  piece list container */
+  
+
+  /*dropzone*/
+  .container-4 {
+    border: 3px solid #116CD4;
+    border-radius: 10px;
+    width: 1200px;
+    height: 250px;
+    margin-left: 80px;
+    margin-bottom: 60px;
+    padding: 20px;
+  } /* controls 
+  boarder around dropzone */
+  
+
+  h5 {
+    margin-left: 80px; /* align w/ container-4 */
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #191847;
+  }
+  
+  .dropzone {
+    border: 1px solid #116CD4;
+    border-radius: 10px;
+    background-color:#EFF7FF;
+    width: 820px;
+    height: 200px;
+    margin-left: 300px;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    color: #191847; 
+  
+  }
+
+                         /*test */
+
+              /* overall form*/
+
+/* 9/1 
+.form-container {
+  border: 1px solid #116CD4;
+  border-radius: 10px;
+}
+
+
+
+/* 8/28 */
+input[type=text] {
+  border: 1px solid #116CD4;
+  border-radius:10px;
+  color: #116CD4;
+}
+
+input[type=number] {
+  border: 1px solid #116CD4;
+  border-radius:10px;
+  color: #116CD4;
+}
+
+ /* */
+
+textarea {
+  width:100px;
+  resize: vertical;
+  padding:0px;
+} /* controls textarea inside description-class */
+
+
+select {
+  width: 100%;
+  padding:10px;
+  border-radius:100px;
+  box-shadow:0 0 1px 1px #116CD4;
+}
+
+
+/* 9/7 */
+.full-form-class {
+  padding-left: 75px;
+  width: 1200px;
+  /*border: 5px solid black;*/
+} /* controls left side rn 
+
+
+/* left */
+
+/* 9/1 
+.left-side-row {
+  width: 500px;
+  display: inline-block;
+  padding-left: 50px;
+  float: left;
+  /*border: 5px solid #116CD4;
+  border-radius: 10px;*/
+}
+
+/* 9/4 
+.column{
+  width: 300px;
+}
+
+/* 9/3 
+.left-side-column {
+  display: inline-block;
+  padding-left: 50px;
+  float: left;
+  border: 5px solid green;
+  border-radius: 10px;
+}
+/* */
+.left-side-divison {
+  display: inline-block;
+  padding-left: 50px;
+  float: left;
+  border: 1px solid blue;
+  border-radius: 10px;
+}
+
+/* */
+
+/* left */
+
+/* 9/3 
+.right-side-row {
+  border: 5px solid #116CD4;
+  border-radius: 10px;
+}
+
+/* 
+.right-side-column {
+  display: inline-block;
+  padding-left: 50px;
+  float: left;
+  border: 5px solid green;
+  border-radius: 10px;
+}
+
+/* */
+.right-side-divison {
+  display: inline-block;
+  padding-left: 150px;
+  float: right;
+}
+
+/* */
+
+
+/* btn */
+/* 9/2 
+.btn-row {
+  padding-top: 200px;
+  border: 1px solid #116CD4;
+  border-radius: 10px;
+} /* controls upload btn */
+
+.btn-column {
+  display: inline-block;
+  padding-left: 50px;
+  float: left;
+  border: 5px solid green;
+  border-radius: 10px;
+}
+
+
+.btn-divison {
+  display: inline-block;
+  padding-left: 50px;
+  float: left;
+  border: 5px solid rgb(214, 10, 214);
+  border-radius: 10px;
+}
+
+/* 
+
+div.form-row {
+  padding-top: 80px;
+  padding-bottom: 40px;
+  width: 300px;
+} /*controls row w/ date & visibility */
+
+
+            /* overall form */
+
+/* Left Side */
+/* 8/25 */
+div.title-class {
+    width: 500px;
+} /*controls title field via form helper*/
+
+div.description-class {
+  border: 2px solid #116CD4;
+  border-radius:10px;
+  color: #116CD4;
+  width: 500px;
+  height: fit-content;
+} /*controls description field via form helper*/
+
+
+div.artist-class {
+  padding-top: 50px;
+  width: 500px;
+} /*controls artist field via form helper*/
+
+
+div.types-class {
+  padding-top: 50px;
+  width: 500px;
+} /*controls types field via form helper*/
+
+div.subject-matter-class {
+  padding-top:20px;
+  width: 500px;
+} /*controls subject matter field via form helper*/
+
+div.medium-class {
+  padding-top: 20px;
+  width: 500px;
+} /*controls artist field via form helper*/
+
+/*9/1 */
+div.location-class {
+  padding-top: 20px;
+  width: 500px;
+}
+
+
+div.date-class {
+} /*controls title field via form helper*/
+
+/* 8/29 
+div.left-side-fields {
+  border: 3px solid #116CD4;
+  border-radius:10px;
+  color: #116CD4;
+  width: 100px;
+}
+
+
+
+
+/* Left Side */
+
+
+
+/* Right Side */
+
+/* 9/1 */
+.tags-class {
+  width: 200px;
+} /* controls tags */
+
+/* 9/4 */
+.width-class {
+  width: 75px;
+  height: 100px;
+}
+
+/* 9/7 */
+.height-class {
+  width: 75px;
+  height: 100px;
+}
+
+.depth-class {
+  width: 75px;
+  height: 100px;
+}
+
+.availability-class {
+  height: 100px;
+  width: 50px;
+}
+
+
+/* Right Side */
+                         /* test */         
+

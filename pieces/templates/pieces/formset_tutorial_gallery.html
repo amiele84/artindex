@@ -1,0 +1,67 @@
+{% extends 'base_pieces_working_copy.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+{% crispy form %}
+
+{% block header %}
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<!-- custom css -->
+<link rel="stylesheet" href="{% static 'pieces/base_pieces_header_WK.css' %}">
+
+<div class="container-1">
+    <div class="row">
+      <h2>Add Piece</h2>
+        <div class="views">
+        </div>
+        <div class="tag-filter">
+        </div>
+      </div>
+    <div class="row">
+      {#<a href='#' onclick='overlay()'>Click here to show the overlay</a>#}
+    </div>
+      <hr class="solid">
+      <div class="divider">
+      </div>
+      <br>
+      <p></p>
+{% endblock %}
+
+{% block content %}
+{% load static %}
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+    <!-- custom css & js -->
+    <link rel="stylesheet" href="{% static 'pieces/main.css' %}">
+    <script src="{% static 'js_dzone/base_pieces_piece_only_WK_091921.js' %}" defer></script>
+
+    <!-- test js -->
+    <script src="{% static 'js_dzone/dzone_test.js' %}" defer></script>
+    
+    <!-- dropzone js  & css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+    <script scr="/Volumes/Lexar/django/artindex/pieces/static/dropzone-5.7.0/dist/dropzone.js"></script>
+    
+
+      <!-- photo album -->
+      
+      <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>Gallery</h1>
+    
+                <!-- PHOTO GALLERY -->
+                <section class="photo_gallery">
+                    {% for gallery_image in pet.images.all %}
+                    <a href="{{ gallery_image.image.url }}"><img src="{{ gallery_image.image.url }}" alt="" title="" /></a>
+                    {% endfor %}
+                </section>
+    
+            </div>
+        </div>
+    </div>
+  {% endblock %}
+    
+            <!-- photo album -->
+    
