@@ -42,7 +42,7 @@ Pillow
 platformdirs==2.2.0
 poetry-semver==0.1.0
 pre-commit==2.13.0
-psycopg2 @ file:///opt/concourse/worker/volumes/live/7541fe58-2a45-4073-5d69-313e733fc729/volume/psycopg2_1612298592535/work
+psycopg2 
 pycodestyle==2.7.0
 pyflakes==2.3.1
 Pygments==2.9.0
