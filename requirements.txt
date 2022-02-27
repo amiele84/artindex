@@ -38,8 +38,7 @@ nodeenv==1.6.0
 olefile==0.46
 packaging==21.0
 pathspec==0.8.1
-Pillow @ file:///opt/concourse/worker/volumes/live/8067240d-53f2-4833-4510-21beb8d5daf0/volume/pillow_1614711429701/work
-pipenv==2021.5.29
+Pillow
 platformdirs==2.2.0
 poetry-semver==0.1.0
 pre-commit==2.13.0
