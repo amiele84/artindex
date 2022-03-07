@@ -1,1 +1,1 @@
-web:gunicorn artindex.wsgi
+web: gunicorn artindex.wsgi
