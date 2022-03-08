@@ -62,9 +62,9 @@ urlpatterns += [
 
 ##urlconf for scrapbook tutorial
 #taken from: https://www.pluralsight.com/guides/work-with-ajax-django
-urlpatterns += [
-    path('', include('scrapbook1.urls')),
-]
+#urlpatterns += [
+#    path('', include('scrapbook1.urls')),
+#]
 
 
 
