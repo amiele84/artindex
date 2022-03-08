@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
-import django_heroku
+import django_heroku #03/07
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -171,11 +171,11 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_TMP = os.path.join(BASE_DIR, 'static')
+STATIC_TMP = os.path.join(BASE_DIR, 'static') #03/07
 STATIC_URL = '/static/'
 
-os.makedirs(STATIC_TMP, exist_ok=True) #
-os.makedirs(STATIC_ROOT, exist_ok=True)
+os.makedirs(STATIC_TMP, exist_ok=True) #03/07
+os.makedirs(STATIC_ROOT, exist_ok=True) #03/07
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
