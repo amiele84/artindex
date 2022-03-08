@@ -1,0 +1,10 @@
+
+                  /*inner container*/
+/*inner container*/
+.container-2 {
+  padding-left: 100px;
+  background-color: white;
+  font-size: 10px;
+  width: 95%;
+  height: fit-content;
+}

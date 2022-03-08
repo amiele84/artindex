@@ -7,7 +7,8 @@
 {% load crispy_forms_tags %}
 
 <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="{% static 'pieces/pieces_list3122021.css' %}">
+<link rel="stylesheet" href="{% static 'pieces/base_pieces_header_WK.css' %}">
+
 
   <div class="container-1">
     <div class="row">
@@ -41,18 +42,18 @@
       <hr class="solid">
       <div class="divider"></div>
       <p></p>
+    </div>
 {% endblock %}
 
 
 {% block content %}
 <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="{% static 'pieces/login.css' %}">
-
+<link rel="stylesheet" href="{% static 'pieces/login_wk_0309.css' %}">
+    
 <div class="container-2" height="900px;">
   <div class="row">
-    <div class="container-4" style="margin-left:30%;">
+    <div class="container-4" style="padding-left: 500px;">
       <form method="post">
-        <h2></h2>
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Log In</button>
