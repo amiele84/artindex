@@ -184,5 +184,5 @@ STATICFILES_DIRS = (
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-#03/07
+#03/07/2022
 django_heroku.settings(locals())
