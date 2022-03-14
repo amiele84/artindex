@@ -17,6 +17,17 @@ urlpatterns = [
     path('pieces/<uuid:pk>/delete/', PieceDeleteView.as_view(), name='delete'),
 ]
 
+
+
+###9/24
+#combining new1/ w/ pet
+from .views import multiple_piece_view, multiple_piece_view2
+
+urlpatterns += [
+    path('pieces/uploadpiece/', multiple_piece_view, name="upload_piece_index"), #10/28
+    #path('pieces/uploadpiece/<int:pk>/', upload_piece_gallery, name="upload_piece_index"),
+]
+
                     ### end of in use ###
 
 
@@ -61,16 +72,6 @@ from .views import test_upload_view
 
 urlpatterns += [
     path('pieces/test/upload/', test_upload_view, name='test-upload'),
-]
-
-
-###9/24
-#combining new1/ w/ pet
-from .views import multiple_piece_view, multiple_piece_view2
-
-urlpatterns += [
-    path('pieces/uploadpiece/', multiple_piece_view, name="upload_piece_index"), #10/28
-    #path('pieces/uploadpiece/<int:pk>/', upload_piece_gallery, name="upload_piece_index"),
 ]
 
 ##10/11

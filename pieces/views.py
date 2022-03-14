@@ -90,6 +90,97 @@ class PieceListView3(LoginRequiredMixin, FilterView):
         return sort
 
 
+class PieceUpdateView(generic.UpdateView):
+    model = NewPiece 
+    fields = [
+            'artist', 'title',
+            'description', 'types', 'medium',
+            'subject_matter', 'location', 'date_of_upload',
+            'visibility', 'width', 'height', 'depth', 'dim',
+            'availability', 'price','tags',
+            ]
+            
+    #template_name_suffix = '_update_form'
+    
+    template_name = 'pieces/base_pieces_update_form_working_copy.html'
+    #template_name = 'pieces/base_pieces_update_form_in_use.html'
+    
+    success_url = reverse_lazy('artwork:pieces')
+
+#delete piece
+class PieceDeleteView(DeleteView):
+    model = NewPiece
+    template_name_suffix = '_confirm_delete'
+    success_url = reverse_lazy('artwork:pieces')
+
+
+
+
+
+###9/24
+#combining new1/ w/ pet
+from django.forms import modelformset_factory
+from .models import PieceImage
+from .forms import UploadPieceForm, PieceImageForm
+
+def multiple_piece_view(request):
+    ImageFormSet = modelformset_factory(PieceImage, form=PieceImageForm, extra=3)
+
+    if request.method == "GET":
+        #upload_piece_form = UploadPieceForm()
+        upload_piece_form = TestForm3(
+            initial={
+
+                ##left side
+                'title':'Add Title',
+                'description': 'Add Description',
+                'medium': 'Add Medium',
+                'subject_matter': 'Add Subject Matter',
+                'location': 'Add Location',
+                'date_of_upload': 'mm/dd/yyyy',
+
+                ##right side
+                'tags': 'Add Tags', #12-27
+
+                }
+            ) #9/26
+        
+        formset = ImageFormSet(queryset=PieceImage.objects.none())
+        return render(request, 'pieces/new1_and_pet_test.html', {"upload_piece_form":upload_piece_form, "formset":formset})
+    elif request.method == "POST":
+        #upload_piece_form = UploadPieceForm(request.POST)
+        upload_piece_form = TestForm3(request.POST) #9/26
+        
+        formset = ImageFormSet(request.POST, request.FILES)
+
+        if upload_piece_form.is_valid() and formset.is_valid():
+            data_obj = upload_piece_form.save()
+
+            for form in formset.cleaned_data:
+                if form:
+                    image = form['image'] #
+                    new_image = PieceImage.objects.create(image=image, data=data_obj)
+                    new_image.save()
+        
+            return render(request, 'pieces/new1_and_pet_test.html') ##send pics back as context data
+
+            #10/30
+#            new_images = PieceImage.objects.all()
+#            return render(request, 'pieces/new1_and_pet_test.html', {"new_images" : new_images})
+    
+
+#def upload_piece_gallery(request, pk):
+#    pass
+
+
+
+
+
+### end of in use ###
+
+
+#### OUT OF USE ###
+
 ##Add_Edit##
 
 ##version of this that works 
@@ -135,33 +226,9 @@ class NewPieceUploadView(LoginRequiredMixin, TemplateView):
                     ##update piece##
 #directs from collections url
 #just can't change img
-class PieceUpdateView(generic.UpdateView):
-    model = NewPiece 
-    fields = [
-            'artist', 'title',
-            'description', 'types', 'medium',
-            'subject_matter', 'location', 'date_of_upload',
-            'visibility', 'width', 'height', 'depth', 'dim',
-            'availability', 'price','tags',
-            ]
-            
-    #template_name_suffix = '_update_form'
-    
-    template_name = 'pieces/base_pieces_update_form_working_copy.html'
-    #template_name = 'pieces/base_pieces_update_form_in_use.html'
-    
-    success_url = reverse_lazy('artwork:pieces')
-
-#delete piece
-class PieceDeleteView(DeleteView):
-    model = NewPiece
-    template_name_suffix = '_confirm_delete'
-    success_url = reverse_lazy('artwork:pieces')
 
 
-
-### end of in use ###
-
+#### end of out of use ####
 
 
 
@@ -279,63 +346,6 @@ def add_pet_view(request):
 def gallery_view2(request, pk):
     pet = Pet.objects.get(id=pk)
     return render(request, 'pieces/formset_tutorial_gallery.html', {"pet":pet})
-
-
-
-###9/24
-#combining new1/ w/ pet
-from django.forms import modelformset_factory
-from .models import PieceImage
-from .forms import UploadPieceForm, PieceImageForm
-
-def multiple_piece_view(request):
-    ImageFormSet = modelformset_factory(PieceImage, form=PieceImageForm, extra=3)
-
-    if request.method == "GET":
-        #upload_piece_form = UploadPieceForm()
-        upload_piece_form = TestForm3(
-            initial={
-
-                ##left side
-                'title':'Add Title',
-                'description': 'Add Description',
-                'medium': 'Add Medium',
-                'subject_matter': 'Add Subject Matter',
-                'location': 'Add Location',
-                'date_of_upload': 'mm/dd/yyyy',
-
-                ##right side
-                'tags': 'Add Tags', #12-27
-
-                }
-            ) #9/26
-        
-        formset = ImageFormSet(queryset=PieceImage.objects.none())
-        return render(request, 'pieces/new1_and_pet_test.html', {"upload_piece_form":upload_piece_form, "formset":formset})
-    elif request.method == "POST":
-        #upload_piece_form = UploadPieceForm(request.POST)
-        upload_piece_form = TestForm3(request.POST) #9/26
-        
-        formset = ImageFormSet(request.POST, request.FILES)
-
-        if upload_piece_form.is_valid() and formset.is_valid():
-            data_obj = upload_piece_form.save()
-
-            for form in formset.cleaned_data:
-                if form:
-                    image = form['image'] #
-                    new_image = PieceImage.objects.create(image=image, data=data_obj)
-                    new_image.save()
-        
-            return render(request, 'pieces/new1_and_pet_test.html') ##send pics back as context data
-
-            #10/30
-#            new_images = PieceImage.objects.all()
-#            return render(request, 'pieces/new1_and_pet_test.html', {"new_images" : new_images})
-    
-
-#def upload_piece_gallery(request, pk):
-#    pass
 
 
 
