@@ -42,6 +42,9 @@ class ContactsDetailView(generic.DetailView):
     model = Contact
     template_name = 'contacts/contact_detail_working_copy.html'
 
+
+
+
 ##update contact
 class ContactsUpdateView(generic.UpdateView):
     model = Contact
@@ -55,11 +58,16 @@ class ContactsUpdateView(generic.UpdateView):
     success_url = reverse_lazy('contacts:contacts')
 
 
+
+
 #delete contact
 class ContactsDeleteView(DeleteView):
     model = Contact
     template_name_suffix = '_confirm_delete'
     success_url = reverse_lazy('contacts:contacts')
+
+
+
 
 ##list of contacts
 class ContactsListView(LoginRequiredMixin, FilterView):
@@ -72,31 +80,7 @@ class ContactsListView(LoginRequiredMixin, FilterView):
     filterset_class = FilterContacts
 
 
-##new contact view
-class NewContactloadView(TemplateView):
-    form = NewContactUploadForm
-    template_name = 'contacts/new_contact_working_copy.html'
-    #template_name = 'contacts/new_contact_in_use.html'
 
-    def post(self, request, *args, **kwargs):
-
-        form = NewContactUploadForm(request.POST, request.FILES)
-
-        if form.is_valid():
-            obj = form.save()
-            return HttpResponseRedirect(reverse_lazy('contacts:contacts'))
-
-        context = self.get_context_data(form=form)
-        return self.render_to_response(context)     
-
-    def get(self, request, *args, **kwargs):
-        return self.post(request, *args, **kwargs)
-
-
-            ##end of in use##
-
-
-            ### test ###
 
 ##1/9/2022
 from django.forms import modelformset_factory
@@ -166,6 +150,33 @@ def multiple_contact_view(request):
 #def upload_piece_gallery(request, pk):
 #    pass
 
+
+##end of in use##
+
+
+### test ###
+
+
+
+##new contact view
+class NewContactloadView(TemplateView):
+    form = NewContactUploadForm
+    template_name = 'contacts/new_contact_working_copy.html'
+    #template_name = 'contacts/new_contact_in_use.html'
+
+    def post(self, request, *args, **kwargs):
+
+        form = NewContactUploadForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            obj = form.save()
+            return HttpResponseRedirect(reverse_lazy('contacts:contacts'))
+
+        context = self.get_context_data(form=form)
+        return self.render_to_response(context)     
+
+    def get(self, request, *args, **kwargs):
+        return self.post(request, *args, **kwargs)
 
 
 
